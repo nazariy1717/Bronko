@@ -1,0 +1,135 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+.footer{
+  background-color: #222427;
+  padding: 80px 0;
+  @media (max-width: $breakpoint-grid-lg){
+    padding: 60px 0;
+  }
+  @media (max-width: $breakpoint-sm){
+    padding: 45px 0;
+  }
+  &__column{
+    @media (max-width: $breakpoint-lg){
+      margin-bottom: 30px;
+      &:nth-child(4){
+        @include order(2);
+      }
+      &:nth-child(3){
+        @include order(3);
+      }
+      &:nth-child(2){
+        @include order(4);
+      }
+    }
+  }
+  &__social{
+    margin: 30px 0;
+    a:hover{
+      color: #fff;
+    }
+  }
+  &__title{
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.07;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__txt{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.57;
+    color: var(--col-warm-grey);
+  }
+  &__img{
+    display: inline-block;
+    margin-bottom: 20px;
+    & + &{
+      margin-left: 20px;
+      @media (max-width: $breakpoint-xl) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.footer-links{
+  &__link{
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.57;
+    color: var(--col-warm-grey);
+    @include transition();
+    &:hover{
+      color: #fff;
+    }
+  }
+}
+
+
+.footer-nav{
+  &__item{
+    &:last-child{
+      .footer-nav__link:after,.footer-nav__link:before{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    position: relative;
+    display: block;
+    height: 35px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.57;
+    color: var(--col-warm-grey);
+    @include transition();
+    margin-bottom: 10px;
+    &:before, &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+    }
+    &:before{
+      background-color: var(--col-warm-grey);
+    }
+    &:after{
+      width: 0;
+      background-color: #fff;
+      @include transition();
+    }
+    &:hover{
+      color: #fff;
+      &:after{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.copyright{
+  height: 80px;
+  background-color: #191a1b;
+  &__txt{
+    line-height: 80px;
+    a{
+      @include transition;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+}
