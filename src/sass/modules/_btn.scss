@@ -15,8 +15,7 @@
 }
 
 .btn-primary{
-  width: 100%;
-  max-width: 170px;
+  width: 170px;
   padding: 0;
   height: 40px;
   border-radius: 4px;
@@ -27,9 +26,12 @@
   line-height: 40px;
   font-family: 'Myriad Pro', sans-serif;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   color: #fff;
   @include transition;
+  &.--black{
+    background-color: var(--col-black);
+  }
   &:hover{
     box-shadow: 0 0 13px rgba(78, 78, 78, 0.2);
   }
