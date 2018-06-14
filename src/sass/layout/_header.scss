@@ -2,14 +2,51 @@
 @import "../tools/breakpoints";
 
 
-
-
-
-
 .top-bar{
-  height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
   background-color: #414141;
+  &__container{
+    margin: auto;
+    max-width: 1310px;
+    padding: 0 15px;
+  }
+  &__row{
+    height: 35px;
+  }
+  &__info{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: normal;
+    color: #a0a0a0;
+  }
+  &__list{}
+  &__list-item{
+    display: inline-block;
+    & + &{
+      margin-left: 40px;
+    }
+  }
+  &__list-link{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    color: #a0a0a0;
+    @include transition;
+    &:hover{
+      color: #fff;
+    }
+  }
 }
+
+
 
 .header{
   position: absolute;
@@ -26,7 +63,7 @@
   &__row{
     height: 100px;
   }
-  &__{}
+
   &__{}
 }
 

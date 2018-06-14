@@ -12,7 +12,30 @@
 </head>
 <body>
 
-<div class="top-bar"></div>
+
+
+<div class="top-bar">
+    <div class="top-bar__container">
+        <div class="row m-row align-justify align-middle top-bar__row">
+            <div class="column col-lg-6 large-offset-3">
+                <span class="top-bar__info">Free shipping on orders of $200 or more!</span>
+            </div>
+            <div class="column col-lg-3">
+                <ul class="top-bar__list">
+                    <li class="top-bar__list-item">
+                        <a href="/" class="top-bar__list-link">Instructors</a>
+                    </li>
+                    <li class="top-bar__list-item">
+                        <a href="/" class="top-bar__list-link">Stores</a>
+                    </li>
+                    <li class="top-bar__list-item">
+                        <a href="/" class="top-bar__list-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <header class="header">
@@ -49,7 +72,42 @@
 
 
 <div class="home-screen">
+    <div class="home-screen__carousel">
+        <div class="home-screen__cell display-table" style="background-image: url(img/home-slide.png);">
+            <div class="display-table__cell">
+                <div class="container">
+                    <div class="home-screen__content">
+                        <span class="home-screen__subtitle">Camp 2018</span>
+                        <h2 class="home-screen__title"><strong>MARCH</strong> BREAK</h2>
+                        <a href="/" class="btn btn-primary">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-screen__cell display-table" style="background-image: url(img/home-slide.png);">
+            <div class="display-table__cell">
+                <div class="container">
+                    <div class="home-screen__content">
+                        <span class="home-screen__subtitle">Camp 2018</span>
+                        <h2 class="home-screen__title"><strong>MARCH</strong> BREAK</h2>
+                        <a href="/" class="btn btn-primary">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-screen__cell display-table" style="background-image: url(img/home-slide.png);">
+            <div class="display-table__cell">
+                <div class="container">
+                    <div class="home-screen__content">
+                        <span class="home-screen__subtitle">Camp 2018</span>
+                        <h2 class="home-screen__title"><strong>MARCH</strong> BREAK</h2>
+                        <a href="/" class="btn btn-primary">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+    </div>
 </div>
 
 
@@ -453,6 +511,11 @@
 
 
 <script src="js/libs/jquery-3.2.1.min.js"></script>
+<script src="js/libs/flickity.pkgd.min.js"></script>
+<script src="js/front.js"></script>
+<script type="text/javascript">
+    front.newSlider('.home-screen__carousel', {pageDots: true});
+</script>
 
 </body>
 </html>

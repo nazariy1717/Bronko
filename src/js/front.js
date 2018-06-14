@@ -2,11 +2,25 @@ let front = {
     hamburger: $('.hamburger'),
     nav: $('.header-list'),
 
+    slider_options_default: {
+        wrapAround: true,
+        pageDots: false,
+        prevNextButtons: true,
+        autoPlay: true,
+        cellAlign: 'left',
+        contain: true,
+        imagesLoaded: true
+    },
 
     init: function () {
         this.events();
         this.headerScroll();
-        this.rangeInit();
+    },
+
+    newSlider: function (selector, options) {
+        options = (options !== undefined) ? Object.assign({}, this.slider_options_default, options) : this.slider_options_default;
+        // let carousel = new Flickity(document.querySelector(selector), options);
+        return new Flickity(document.querySelector(selector), options);
     },
 
 
@@ -31,36 +45,7 @@ let front = {
         }
     },
 
-    getVals: function () {
-        let parent = this.parentNode;
-        let slides = parent.getElementsByTagName("input");
-        let slide1 = parseFloat( slides[0].value );
-        let slide2 = parseFloat( slides[1].value );
-        if( slide1 > slide2 ){
-            slide1 = slide2;
-            slides[0].value = slides[1].value;
-            // let tmp = slide2; slide2 = slide1; slide1 = tmp;
-        }
-        else if (slide2 <= slide1){
-            slide2 = slide1;
-            slides[1].value = slides[0].value;
-        }
-        let displayElement = parent.getElementsByClassName("rangeValues")[0];
-        displayElement.innerHTML = "$ " + slide1 + " - $ " + slide2;
-    },
 
-    rangeInit: function(){
-        let sliderSections = document.getElementsByClassName("range");
-        for( let x = 0; x < sliderSections.length; x++ ){
-            let sliders = sliderSections[x].getElementsByTagName("input");
-            for( let y = 0; y < sliders.length; y++ ){
-                if( sliders[y].type ==="range" ){
-                    sliders[y].oninput = this.getVals;
-                    sliders[y].oninput();
-                }
-            }
-        }
-    },
 
     openTab: function (element, tabName, parent) {
         let i, tab_content, tab_links;

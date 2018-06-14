@@ -43,8 +43,8 @@
 .flickity-prev-next-button {
   position: absolute;
   top: 50%;
-  width: 13px;
-  height: 25px;
+  width: 30px;
+  height: 50px;
   cursor: pointer;
   border: 0;
   outline: none;
@@ -58,139 +58,17 @@
 }
 
 .flickity-prev-next-button.previous {
-  left: -85px;
-  background: url(../img/slider-arr-prev.png) center no-repeat;
+  left: 20px;
+  background: url(../img/carousel/slider-arr-prev.png) center no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
-  @media (max-width: $breakpoint-lg){
-    left: -45px;
-  }
-  @media (max-width: $breakpoint-md){
-    left: -15px;
-  }
 }
 
 .flickity-prev-next-button.next {
-  right: -85px;
-  background: url(../img/slider-arr-next.png) center no-repeat;
+  right: 20px;
+  background: url(../img/carousel/slider-arr-next.png) center no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
-  @media (max-width: $breakpoint-lg){
-    right: -45px;
-  }
-  @media (max-width: $breakpoint-md){
-    right: -15px;
-  }
-}
-
-
-
-
-.app-carousel{
-  .flickity-prev-next-button {
-    width: 21px;
-    height: 40px;
-    top: calc(630px / 2);
-  }
-  .flickity-prev-next-button.previous {
-    left: 40px;
-    background: url(../img/app-carousel-prev.png) center no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
-    @media (max-width: $breakpoint-xl){
-      left: 15px;
-    }
-    @media (max-width: $breakpoint-sm){
-      left: 5px;
-    }
-  }
-
-  .flickity-prev-next-button.next {
-    right: 40px;
-    background: url(../img/app-carousel-next.png) center no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
-    @media (max-width: $breakpoint-xl){
-      right: 15px;
-    }
-    @media (max-width: $breakpoint-sm){
-      right: 5px;
-    }
-  }
-}
-
-
-.app-suggest__carousel{
-  @media (max-width: $breakpoint-xl){
-    padding: 0 30px;
-  }
-  .flickity-prev-next-button.previous {
-    left: -30px;
-    @media (max-width: $breakpoint-xl){
-      left: 15px;
-    }
-    @media (max-width: $breakpoint-lg){
-      left: 15px;
-    }
-    @media (max-width: $breakpoint-md){
-      left: 15px;
-    }
-  }
-  .flickity-prev-next-button.next {
-    right: -30px;
-    @media (max-width: $breakpoint-xl){
-      right: 15px;
-    }
-    @media (max-width: $breakpoint-lg){
-      right: 15px;
-    }
-    @media (max-width: $breakpoint-md){
-      right: 15px;
-    }
-  }
-}
-
-
-.product__carousel{
-  .flickity-prev-next-button {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    height: initial;
-    transform: none;
-    width: 40px;
-    background-image: none;
-    background-color: rgba(0,0,0,0.45);
-    &:after{
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 38px;
-      top: 50%;
-      left: 50%;
-      opacity: 0.7;
-      transform: translate(-50%,-50%);
-      @include transition;
-    }
-    &:hover{
-      &:after{
-        opacity: 0.9;
-      }
-    }
-  }
-
-  .flickity-prev-next-button.previous {
-    left: 0;
-    &:after{
-      background: url(../img/app-carousel-prev.png) center no-repeat;
-    }
-  }
-  .flickity-prev-next-button.next {
-    right: 0;
-    &:after{
-      background: url(../img/app-carousel-next.png) center no-repeat;
-    }
-  }
 }
 
 
@@ -232,7 +110,7 @@
   width: 100%;
   left: 0;
   right: 0;
-  bottom: -40px;
+  bottom: 30px;
   z-index: 10;
   padding: 0;
   list-style: none;
@@ -241,27 +119,21 @@
   transition: all 0.3s ease;
   .dot {
     position: relative;
-    width: 10px;
-    height: 10px;
-    border: solid 1px var(--col-battleship-grey);
-    border-radius: 50%;
+    width: 170px;
+    height: 5px;
     display: inline-block;
     cursor: pointer;
-    background-color: transparent;
+    background-color: #fff;
+    @include transition;
+    &:hover{
+      background-color: var(--col-primary);
+    }
   }
   .dot + .dot {
-    margin-left: 10px;
+    margin-left: 30px;
   }
-  .dot.is-selected:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 50%;
-    background-color: var(--col-battleship-grey);
-    @include transition;
+  .dot.is-selected {
+    background-color: var(--col-primary)
   }
 }
 
