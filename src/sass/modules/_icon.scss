@@ -11,6 +11,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-letter:before {
+  content: "\e901";
+  font-size: 15px;
+}
+
+
+/*******/
+.icon-phone:before {
+  content: "\e908";
+}
 .icon-facebook:before {
   content: "\e900";
 }
@@ -28,4 +38,7 @@
 }
 .icon-youtube:before {
   content: "\e907";
+}
+.icon-location:before {
+  content: "\e947";
 }

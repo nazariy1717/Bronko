@@ -1,0 +1,46 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.contacts{
+  &__block{
+    padding-left: 35px;
+    margin-bottom: 30px;
+  }
+  &__title{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.31;
+    color: var(--col-grey);
+    margin-bottom: 20px;
+  }
+  &__item{
+    position: relative;
+    margin-bottom: 15px;
+    i{
+      position: absolute;
+      left: -30px;
+      font-size: 18px;
+      color: var(--col-black);
+    }
+  }
+  &__{}
+}
+
+.contacts-social{
+  &__item{
+    display: inline-block;
+    & + &{
+      margin-left: 30px;
+    }
+  }
+  &__link{
+    display: block;
+    font-size: 40px;
+    color: var(--col-primary);
+    @include transition;
+    &:hover{
+      color: var(--col-black);
+    }
+  }
+}

@@ -19,7 +19,7 @@
     display: inline-block;
   }
   &__item + &__item{
-    padding-left: 10px;
+    padding-left: 15px;
   }
   &__item + &__item:before{
     content: '>';
@@ -32,6 +32,7 @@
   }
   &__link{
     display: block;
+    text-transform: uppercase;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;

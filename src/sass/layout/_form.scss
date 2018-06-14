@@ -35,8 +35,19 @@ input[type=number]::-webkit-outer-spin-button {
   }
 
   &__area{
-
-
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: solid 1px var(--col-d4);
+    outline: none;
+    resize: none;
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+    color: var(--col-grey);
   }
 
   &__input, &__select{
