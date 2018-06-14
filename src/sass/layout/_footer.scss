@@ -3,10 +3,27 @@
 
 
 .footer{
-  padding: 80px 0;
-  height: 481px;
-  opacity: 0.75;
-  background-color: #000000;
+  position: relative;
+  padding: 55px 0 30px;
+  background: url("../img/background/footer-bg.png") center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  &__overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.75;
+    background-color: var(--col-black);
+  }
+  &__content{
+    position: relative;
+    z-index: 3;
+  }
+  &__column{
+    margin-bottom: 25px;
+  }
 
   &__title{
     display: block;
@@ -36,7 +53,60 @@
 }
 
 
+.footer-form{
+  position: relative;
+  &__input{
+    border: 0;
+    color: #efefef;
+    padding-right: 80px;
+    border-radius: 3px;
+    background-color: rgba(216, 216, 216,0.15);
+  }
+  &__btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    background-color: var(--col-grey);
+  }
+}
+
+.footer-social{
+  &__item{
+    display: inline-block;
+    & + &{
+      margin-left: 25px;
+    }
+  }
+  &__link{
+    display: block;
+    font-size: 40px;
+    color: #fff;
+    @include transition;
+    &:hover{
+      color: var(--col-primary);
+    }
+  }
+}
+
+
 .copyright{
-  height: 85px;
+  padding: 30px 0;
   background-color: var(--col-black);
+  &__txt{
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.79;
+    color: #a0a0a0;
+  }
+  &__link{
+    color: #fff;
+    @include transition;
+    &:hover{
+      color: var(--col-primary);
+    }
+  }
 }

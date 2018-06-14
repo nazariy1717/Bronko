@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,46 @@
 <body>
 
 <div class="top-bar"></div>
-<header class="header"></header>
+
+
+<header class="header">
+    <div class="header__container">
+        <div class="row m-row align-justify align-middle header__row">
+            <div class="column col-lg-3">
+                <a href="/">
+                    <img src="img/logos/logo-bronko.png" class="image">
+                </a>
+            </div>
+            <div class="column col-lg-6">
+                <ul class="header-menu">
+                    <li class="header-menu__item">
+                        <a href="/" class="header-menu__link active">SHOP</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="/" class="header-menu__link">TRAIN</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="/" class="header-menu__link">PLAY</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="/" class="header-menu__link">ABOUT</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="/" class="header-menu__link">SKILLS CENTER</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column col-lg-3"></div>
+        </div>
+    </div>
+</header>
+
+
+<div class="home-screen">
+
+</div>
+
+
 
 <!--Quick Links-->
 <section class="section --grey-background --padding">
@@ -21,43 +60,50 @@
         <div class="title-block --modifier text-center">
             <h2 class="title-block__title"><span>Quick</span> Links</h2>
         </div>
-
         <div class="row m-row">
             <div class="column col-lg-3 home-column">
-                <div class="home-column__head">
-                    <img src="/" class="image home-column__image">
-                </div>
-                <div class="home-column__content">
-                    <span class="home-column__title">Bronko Skills Center</span>
-                    <p class="home-column__text app-txt">Professional skills development tips and effective drill progressions you can start using today.</p>
-                </div>
+                <a href="/">
+                    <div class="home-column__head">
+                        <img src="img/quick_link_1.png" class="image home-column__image">
+                    </div>
+                    <div class="home-column__content">
+                        <span class="home-column__title">Bronko Skills Center</span>
+                        <p class="home-column__text app-txt">Professional skills development tips and effective drill progressions you can start using today.</p>
+                    </div>
+                </a>
             </div>
             <div class="column col-lg-3 home-column">
-                <div class="home-column__head">
-                    <img src="/" class="image home-column__image">
-                </div>
-                <div class="home-column__content">
-                    <span class="home-column__title">Buy Bronko Belt Now</span>
-                    <p class="home-column__text app-txt">Develop the leg and core strength needed for proper technique and explosive speed.</p>
-                </div>
+                <a href="/">
+                    <div class="home-column__head">
+                        <img src="img/quick_link_2.png" class="image home-column__image">
+                    </div>
+                    <div class="home-column__content">
+                        <span class="home-column__title">Buy Bronko Belt Now</span>
+                        <p class="home-column__text app-txt">Develop the leg and core strength needed for proper technique and explosive speed.</p>
+                    </div>
+                </a>
             </div>
             <div class="column col-lg-3 home-column">
-                <div class="home-column__head">
-                    <img src="/" class="image home-column__image">
-                </div>
-                <div class="home-column__content">
-                    <span class="home-column__title">Upcoming Camps</span>
-                    <p class="home-column__text app-txt">Learn from our professional instructors in a fun and challenging environment at one of our camps.</p>
-                </div>
+                <a href="/">
+                    <div class="home-column__head">
+                        <img src="img/quick_link_3.png" class="image home-column__image">
+                    </div>
+                    <div class="home-column__content">
+                        <span class="home-column__title">Upcoming Camps</span>
+                        <p class="home-column__text app-txt">Learn from our professional instructors in a fun and challenging environment at one of our camps.</p>
+                    </div>
+                </a>
             </div>
             <div class="column col-lg-3 home-column">
-                <div class="home-column__head">
-                    <img src="/" class="image home-column__image">
-                </div>
-                <div class="home-column__content">
-                    <span class="home-column__title">On-Ice Programs</span>
-                    <p class="home-column__text app-txt">Team training, small groups and private lessons. Let us help you reach your goals.</p>
-                </div>
+                <a href="/">
+                    <div class="home-column__head">
+                        <img src="img/quick_link_4.png" class="image home-column__image">
+                    </div>
+                    <div class="home-column__content">
+                        <span class="home-column__title">On-Ice Programs</span>
+                        <p class="home-column__text app-txt">Team training, small groups and private lessons. Let us help you reach your goals.</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -65,7 +111,8 @@
 
 
 <!-- About Us -->
-<section class="section --background">
+<section class="section home-about">
+    <div class="home-about__overlay"></div>
     <div class="container">
         <div class="row m-row">
             <div class="column col-lg-7">
@@ -82,40 +129,45 @@
 
 
 <!--Sign up-->
-<section class="section --grey-background">
+<section class="section --ice-bg">
     <div class="container">
-
         <div class="title-block --modifier text-center">
             <span class="title-block__subtitle">Shop</span>
             <h2 class="title-block__title"><span>Sign up</span> FOR A CAMP</h2>
         </div>
-        <div class="row m-row">
+        <div class="row m-row align-justify">
             <div class="column col-lg-4 home-column --modifier">
-                <div class="home-column__head --type-2">
-                    <img src="/" class="image home-column__image">
-                </div>
-                <div class="home-column__content">
-                    <span class="home-column__title">March Break Camp 2018</span>
-                    <p class="home-column__text app-txt">Develop essential skating and puck skills with 8 hours of hi-tempo on-ice instruction. A great way to expand your skill set heading into the spring season and tryouts.</p>
-                </div>
+                <a href="/">
+                    <div class="home-column__head --type-2">
+                        <img src="img/camp_1.png" class="image home-column__image">
+                    </div>
+                    <div class="home-column__content">
+                        <span class="home-column__title">March Break Camp 2018</span>
+                        <p class="home-column__text app-txt">Develop essential skating and puck skills with 8 hours of hi-tempo on-ice instruction. A great way to expand your skill set heading into the spring season and tryouts.</p>
+                    </div>
+                </a>
             </div>
             <div class="column col-lg-4 home-column">
-                <div class="home-column__head --type-2">
-                    <img src="/" class="image home-column__image">
-                </div>
-                <div class="home-column__content">
-                    <span class="home-column__title">Pre Tryout Camp 2018</span>
-                    <p class="home-column__text app-txt">Make sure you're playing your best heading into this important time of year. Impress coaches, parents and teammates with an expanded skill set and loads of confidence.</p>
-                </div>
+                <a href="/">
+                    <div class="home-column__head --type-2">
+                        <img src="img/camp_2.png" class="image home-column__image">
+                    </div>
+                    <div class="home-column__content">
+                        <span class="home-column__title">Pre Tryout Camp 2018</span>
+                        <p class="home-column__text app-txt">Make sure you're playing your best heading into this important time of year. Impress coaches, parents and teammates with an expanded skill set and loads of confidence.</p>
+                    </div>
+                </a>
             </div>
             <div class="column col-lg-4 home-column">
-                <div class="home-column__head --type-2">
-                    <img src="/" class="image home-column__image">
-                </div>
-                <div class="home-column__content">
-                    <span class="home-column__title">Body Contact Camp 2018</span>
-                    <p class="home-column__text app-txt">Making the change from non contact to contact is a big step in the development of a young player. Our Body Contact Camp teaches players to give and receive checks properly…</p>
-                </div>
+                <a href="/">
+                    <div class="home-column__head --type-2">
+                        <img src="img/camp_3.png" class="image home-column__image">
+                    </div>
+                    <div class="home-column__content">
+                        <span class="home-column__title">Body Contact Camp 2018</span>
+                        <p class="home-column__text app-txt">Making the change from non contact to contact is a big step in the development of a young player. Our Body Contact Camp teaches players to give and receive checks properly…</p>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -129,9 +181,9 @@
 <!--BRONKO BELT-->
 <section class="section ">
     <div class="container">
-        <div class="row m-row">
+        <div class="row m-row align-middle">
             <div class="column col-lg-6">
-                <img src="" alt="BRONKO BELT RTI" class="image">
+                <img src="img/belt_rti.png" alt="BRONKO BELT RTI" class="image">
             </div>
             <div class="column col-lg-6">
                 <div class="title-block">
@@ -153,9 +205,8 @@
 </section>
 
 
-
 <!-- Skills Center -->
-<section class="section --background">
+<section class="section home-skill-center">
     <div class="container">
         <div class="row m-row">
             <div class="column col-lg-6">
@@ -164,7 +215,6 @@
                     <h2 class="title-block__title"><span>Skills</span> Center</h2>
                 </div>
                 <p class="app-txt --white mb-50">The Bronko Skills Center is a new and versatile online training platform. It offers subscribers access to a growing database of expert training videos and programs. Coaches will find new drills, learn valuable new teaching cues and enjoy a host of features that make planning great practices and sharing drills easy and productive.</p>
-
                 <div class="row m-row">
                     <div class="column">
                         <a href="/" class="btn btn-primary --black">LEARN MORE</a>
@@ -195,24 +245,22 @@
                 <a href="/" class="btn btn-primary">LEARN MORE</a>
             </div>
             <div class="column col-lg-5">
-                <img src="/" alt="BRONKO ACADEMY">
+                <img src="img/bronko-academy.png" alt="BRONKO ACADEMY" class="image m-auto">
             </div>
         </div>
     </div>
 </section>
 
 
-
-
 <!-- TOURNAMENTS -->
-<section class="section --background">
+<section class="section home-tournaments">
     <div class="container">
-        <div class="row m-row">
+        <div class="row m-row align-middle">
             <div class="column col-lg-3">
-                <img src="/" alt="TOURNAMENTS" class="image m-auto">
+                <img src="img/mss-chosen-logo.png" alt="TOURNAMENTS" class="image m-auto">
             </div>
             <div class="column col-lg-3">
-                <img src="/" alt="TOURNAMENTS" class="image m-auto">
+                <img src="img/tes-chosen-logo.png" alt="TOURNAMENTS" class="image m-auto">
             </div>
             <div class="column col-lg-6">
                 <div class="title-block --white">
@@ -221,7 +269,6 @@
                 </div>
                 <p class="app-txt --white mb-50">Lorem ipsum dolor sit amet, tempor adipiscing pede, qui lorem suscipit nulla ultricies conubia nam, volutpat gravida mauris. Aliquam a. Potenti mi adipiscing, et proin, venenatis sodales tristique nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A arcu cursus vitae congue. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Viverra vitae congue eu consequat ac.</p>
                 <a href="/" class="btn btn-primary">LEARN MORE</a>
-
             </div>
         </div>
     </div>
@@ -229,45 +276,161 @@
 
 
 
-<section class="section --modifier">
-    <div class="container"></div>
+
+<section class="section --padding">
+    <div class="container">
+        <div class="title-block --modifier text-center">
+            <h2 class="title-block__title"><span>START</span> TRAINING</h2>
+        </div>
+
+        <div class="app-training">
+            <div class="row m-row align-justify">
+                <div class="column col-lg-4 app-training__column">
+                    <a href="/">
+                        <div class="app-training__content">
+                            <img src="img/app-training-1.png" class="image">
+                            <div class="app-training__overlay">
+                                <span class="app-training__overlay-title">Players & Parents</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column col-lg-4 app-training__column">
+                    <a href="/">
+                        <div class="app-training__content">
+                            <img src="img/app-training-2.png" class="image">
+                            <div class="app-training__overlay">
+                                <span class="app-training__overlay-title">Instructors & Hockey Schools</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column col-lg-4 app-training__column">
+                    <a href="/">
+                        <div class="app-training__content">
+                            <img src="img/app-training-3.png" class="image">
+                            <div class="app-training__overlay">
+                                <span class="app-training__overlay-title">Teams & Associations</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
-<footer class="footer">
+
+
+<section class="section --grey-background">
     <div class="container">
-        <div class="row m-row">
-            <div class="column col-lg-3">
-                <img src="" alt="footer logo" class="image m-auto">
-            </div>
-            
-            <div class="column col-lg-3">
-                <span class="footer__title">Quick Links</span>
-                <ul class="footer__links">
-                    <li><a href="/">Bronko Skills Center</a></li>
-                    <li><a href="/">Bronko Belt RTI</a></li>
-                    <li><a href="/">On-Ice Programs</a></li>
-                    <li><a href="/">Upcoming Camps</a></li>
-                    <li><a href="/">Bronko Academy</a></li>
-                </ul>
+
+        <div class="row m-row align-middle">
+            <div class="column col-lg-6">
+                <div class="title-block">
+                    <span class="title-block__subtitle">Newsletter</span>
+                    <h2 class="title-block__title"><span>GET</span> CONNECTED</h2>
+                </div>
             </div>
 
+            <div class="column col-lg-6">
+                <p class="app-txt mb-25">Lorem ipsum dolor sit amet, ut ultricies eu, aenean fusce nibh consectetuer fermentum, magna pellentesque dui et justo odio phasellus, at urna non laoreet vel.</p>
+                <div class="home-form">
+                    <form action="/" id="home_form">
+                        <input type="email" name="email" class="form__input home-form__input" required placeholder="Email">
+                        <button class="btn btn-primary home-form__btn" type="submit">SUBMIT</button>
+                    </form>
+                </div>
 
-            <div class="column col-lg-3">
-                <span class="footer__title"></span>
-                <ul class="footer__links">
-                    <li>
-                        <a href="/"></a>
-                    </li>
-                </ul>
             </div>
-            <div class="column col-lg-3">
-                <span class="footer__title"></span>
-                <ul class="footer__links">
-                    <li>
-                        <a href="/"></a>
-                    </li>
-                </ul>
+
+        </div>
+
+
+
+    </div>
+</section>
+
+
+
+
+
+<footer class="footer">
+    <div class="footer__overlay"></div>
+    <div class="footer__content">
+        <div class="container">
+            <div class="row m-row">
+                <div class="column col-lg-3">
+                    <img src="img/logos/footer-logo.png" alt="footer logo" class="image m-auto">
+                </div>
+                <div class="column col-lg-9">
+                    <div class="row">
+                        <div class="column col-lg-4 footer__column">
+                            <span class="footer__title">Quick Links</span>
+                            <ul class="footer__links">
+                                <li><a href="/">Bronko Skills Center</a></li>
+                                <li><a href="/">Bronko Belt RTI</a></li>
+                                <li><a href="/">On-Ice Programs</a></li>
+                                <li><a href="/">Upcoming Camps</a></li>
+                                <li><a href="/">Bronko Academy</a></li>
+                            </ul>
+                        </div>
+                        <div class="column col-lg-4 footer__column">
+                            <span class="footer__title">Start Training</span>
+                            <ul class="footer__links">
+                                <li><a href="/">Players & Parents</a></li>
+                                <li><a href="/">Teams & Associations</a></li>
+                                <li><a href="/">Instructors & Hockey Schools</a></li>
+                            </ul>
+                        </div>
+                        <div class="column col-lg-4 footer__column">
+                            <span class="footer__title">Customer Support</span>
+                            <ul class="footer__links">
+                                <li><a href="/"> My Account</a></li>
+                                <li><a href="/">Shipping & Returns</a></li>
+                                <li><a href="/">Warranty</a></li>
+                                <li><a href="/">FAQs</a></li>
+                                <li><a href="/">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="column col-lg-4 footer__column">
+                            <span class="footer__title">Get Connected</span>
+                            <div class="footer-form">
+                                <form action="/" id="footer_form">
+                                    <input type="email" name="email" class="form__input footer-form__input" placeholder="Email">
+                                    <button class="btn btn-primary footer-form__btn" type="submit">GO</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="column col-lg-4 footer__column">
+                            <span class="footer__title">Social Media</span>
+                            <ul class="footer-social">
+                                <li class="footer-social__item">
+                                    <a href="/" class="footer-social__link icon-instagram" target="_blank" rel="nofollow"></a>
+                                </li>
+                                <li class="footer-social__item">
+                                    <a href="/" class="footer-social__link icon-facebook" target="_blank" rel="nofollow"></a>
+                                </li>
+                                <li class="footer-social__item">
+                                    <a href="/" class="footer-social__link icon-youtube" target="_blank" rel="nofollow"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column col-lg-4 footer__column">
+                            <span class="footer__title">Legal</span>
+                            <ul class="footer__links">
+                                <li><a href="/">Terms & Conditions</a></li>
+                                <li><a href="/">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
     </div>
@@ -276,7 +439,14 @@
 
 <div class="copyright">
     <div class="container">
-
+        <div class="row m-row align-justify">
+            <div class="column">
+                <span class="copyright__txt">© 2018 Bronko Hockey Inc. |  All Rights Reserved.</span>
+            </div>
+            <div class="column">
+                <span class="copyright__txt">Powered by <a href="/" class="copyright__link">Evolution in DesignZ</a></span>
+            </div>
+        </div>
     </div>
 </div>
 

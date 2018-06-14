@@ -1,198 +1,29 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
-.small-screen{
-  position: relative;
-  height: 400px;
-  padding-top: 140px;
-  background-position: center;
-  -webkit-background-size: cover;
-  background-size: cover;
-  //@media print{
-  //  display: none;
-  //}
-  @media (max-width: $breakpoint-lg){
-    padding-top: 110px;
-  }
-  @media (max-width: 850px){
-    padding-top: 105px;
-  }
-  @media (max-width: $breakpoint-md){
-    padding-top: 110px;
-  }
-  @media (max-width: $breakpoint-sm){
-    padding-top: 105px;
-  }
-  &__overlay{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    opacity: 0.55;
-    background-color: var(--col-black);
-  }
-  &__content{
-    position: relative;
-    z-index: 5;
-    height: calc(400px - 140px);
-    @media (max-width: $breakpoint-lg){
-      height: calc(400px - 110px);
-    }
-    @media (max-width: 850px){
-      height: calc(400px - 105px);
-    }
-    @media (max-width: $breakpoint-md){
-      height: calc(400px - 110px);
-    }
-    @media (max-width: $breakpoint-sm){
-      height: calc(400px - 105px);
-    }
-  }
-  &__title{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 1.1;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 5px;
-    @media (max-width: $breakpoint-sm){
-      font-size: 24px;
-    }
-  }
-}
 
-
-.social-list{
-  &__item{
-    display: inline-block;
-    & + &{
-      margin-left: 15px;
-      @media (max-width: $breakpoint-sm){
-        margin-left: 10px;
-      }
-    }
-  }
-  &__link{
-    display: block;
-    font-size: 16px;
-    color: #999;
-    @include transition;
-  }
-}
-
-.app-form{
-  padding: 60px 0 80px 0;
-  background-color: var(--col-light-grey);
-  &__bottom-column{
-    @include grid-size(300px);
-  }
-  &__captcha{
-    width: 270px;
-    height: 67px;
-    border-radius: 3px;
-    background-color: #fafafa;
-    border: solid 1px #d6d6d6;
-    @media(max-width: 620px){
-      margin-bottom: 30px;
-    }
-  }
-}
-
-
-
-.app-testimonial{
-  background-color: #eee;
-  &__quote{
-    display: block;
-    margin: 45px 0;
-    text-align: center;
-    font-size: 30px;
-    color: var(--col-battleship-grey);
-    @media (max-width: $breakpoint-lg){
-      margin: 30px 0;
-    }
-  }
-}
-
-.testimonial{
-  &__cell{
-    width: 100%;
-  }
-  &__text{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    font-weight: normal;
-    font-style: italic;
-    line-height: 1.61;
-    text-align: center;
-    color: #666;
+.app-training{
+  &__column{
+    max-width: 380px;
     margin-bottom: 30px;
   }
-  &__name{
-    display: block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 0.89;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--col-black);
-    margin-bottom: 10px;
-  }
-  &__role{
-    display: block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.64;
-    text-align: center;
-    color: var(--col-warm-grey);
-  }
-}
-
-
-.errorPage{
-  background: url(../img/app-slider.jpg) center no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  &__overlay{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.45);
-  }
   &__content{
     position: relative;
-    padding: 140px 15px;
-    min-height: 100vh;
-    text-align: center;
-    .btn{
-      margin: auto;
+    @include transition;
+    &:hover{
+      box-shadow: 0 11px 25px -3px rgba(0,0,0,0.15);
     }
-    h1{
-      font-family: 'Montserrat', sans-serif;
-      font-size: 120px;
-      font-weight: bold;
-      line-height: normal;
-      color: #fff;
-      margin-bottom: 30px;
-      @media (max-width: $breakpoint-sm){
-        font-size: 90px;
-      }
-    }
-    p{
-      font-family: 'Montserrat', sans-serif;
-      font-size: 30px;
-      color: #fff;
-      margin-bottom: 30px;
-      @media (max-width: $breakpoint-sm){
-        font-size: 24px;
-      }
-    }
+  }
+  &__overlay{
+    background-color: #111626;
+  }
+  &__overlay-title{
+    display: block;
+    padding: 0 15px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 45px;
+    color: #fff;
   }
 }
 

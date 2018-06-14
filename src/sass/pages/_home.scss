@@ -1,26 +1,55 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
+
+.home-screen{
+  padding-top: 135px;
+  height: 100vh;
+  background-color: #414141;
+}
+
+
+
+.home-about{
+  background: url(../img/background/home-about.png) center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  &__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.85;
+    background-blend-mode: darken;
+    background-image: linear-gradient(rgba(17, 22, 38, 0.75), rgba(17, 22, 38, 0.75));
+  }
+}
+
 .home-column{
+  max-width: 380px;
   margin-bottom: 30px;
+  &:hover{
+    .home-column__content{
+      box-shadow: 0 11px 25px -3px rgba(0,0,0,0.15);
+    }
+  }
   &.--modifier{
     margin-bottom: 50px;
   }
   &__head{
     height: 180px;
-    background-color: #222;
     overflow: hidden;
     &.--type-2{
       height: 235px;
     }
   }
   &__image{
-    height: 180px;
-    background-color: #222;
   }
   &__content{
     padding: 10px 15px 30px 15px;
     background-color: #fff;
+    @include transition;
   }
 
   &__title{
@@ -35,4 +64,33 @@
     color: #a0a0a0;
   }
   &__{}
+}
+
+
+.home-skill-center{
+  background: url(../img/background/home-skill-center.png) center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.home-tournaments{
+  background: url(../img/background/home-tournaments.png) center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+
+.home-form{
+  position: relative;
+  &__input{
+    border: 0;
+    padding-right: 180px;
+  }
+  &__btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
 }

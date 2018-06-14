@@ -1,12 +1,66 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
+
+
+
+
+
 .top-bar{
   height: 35px;
   background-color: #414141;
 }
 
 .header{
-  height: 100px;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  z-index: 99;
   background-color: var(--col-black);
+  &__container{
+    margin: auto;
+    max-width: 1310px;
+    padding: 0 15px;
+  }
+  &__row{
+    height: 100px;
+  }
+  &__{}
+  &__{}
+}
+
+.header-menu{
+  text-align: center;
+  &__item{
+    display: inline-block;
+    & + & {
+      margin-left: 35px;
+    }
+  }
+  &__link{
+    position: relative;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: normal;
+    color: #fff;
+    @include transition;
+    &.active{
+      &:after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        margin-left: -5px;
+        bottom: -15px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--col-primary);
+      }
+    }
+    &:hover{
+      color: var(--col-primary);
+    }
+  }
 }
