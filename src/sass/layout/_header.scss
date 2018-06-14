@@ -26,7 +26,9 @@
     line-height: normal;
     color: #a0a0a0;
   }
-  &__list{}
+  &__list{
+    text-align: right;
+  }
   &__list-item{
     display: inline-block;
     & + &{
@@ -63,11 +65,9 @@
   &__row{
     height: 100px;
   }
-
-  &__{}
 }
 
-.header-menu{
+.header-nav{
   text-align: center;
   &__item{
     display: inline-block;
@@ -96,6 +96,26 @@
         background-color: var(--col-primary);
       }
     }
+    &:hover{
+      color: var(--col-primary);
+    }
+  }
+}
+
+
+
+.header-menu {
+  text-align: right;
+  &__item {
+    display: inline-block;
+    & + & {
+      margin-left: 40px;
+    }
+  }
+  &__link {
+    font-size: 25px;
+    color: #fff;
+    @include transition;
     &:hover{
       color: var(--col-primary);
     }
