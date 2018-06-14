@@ -2,6 +2,51 @@
 @import "../tools/breakpoints";
 
 
+.app-head-sm{
+  margin-top: 135px;
+  height: 100px;
+  background: url(../img/background/small-head-bg.png) center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.breadcrumbs{
+  position: relative;
+  &__list{
+  }
+  &__item{
+    position: relative;
+    display: inline-block;
+  }
+  &__item + &__item{
+    padding-left: 10px;
+  }
+  &__item + &__item:before{
+    content: '>';
+    position: absolute;
+    font-size: 16px;
+    font-weight: 600;
+    left: 1px;
+    top: 0;
+    color: rgba(255, 255, 255, 0.65);
+  }
+  &__link{
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    color: rgba(255, 255, 255, 0.65);
+    @include transition;
+    &:hover{
+      color: rgba(255, 255, 255, 1);
+    }
+    &.active:hover{
+      color: rgba(255, 255, 255, 0.65);
+    }
+  }
+}
+
 .app-training{
   &__column{
     max-width: 380px;

@@ -49,13 +49,32 @@ a{
     font-weight: normal;
     line-height: normal;
     color: var(--col-black);
-
     span{
       font-weight: bold;
     }
   }
-
 }
+
+
+.text-block{
+  margin-bottom: 25px;
+  .app-txt + .app-txt {
+    margin-top: 10px;
+  }
+}
+
+
+.app-title-sm{
+  display: block;
+  font-family: 'Myriad Pro', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: normal;
+  color: var(--col-black);
+  margin-bottom: 20px;
+}
+
 
 .app-txt{
   display: block;
@@ -69,15 +88,23 @@ a{
   }
 }
 
+
 .app-list{
   padding-left: 17px;
   list-style-type: disc;
+  &.--modifier{
+    li{
+      padding-left: 5px;
+      margin-bottom: 5px;
+    }
+  }
   li{
     display: list-item;
     padding-left: 10px;
     margin-bottom: 10px;
   }
 }
+
 // end of text classes
 
 .image{
@@ -137,43 +164,6 @@ a{
   }
 }
 
-.breadcrumbs{
-  position: relative;
-  &__list{
-  }
-  &__item{
-    position: relative;
-    display: inline-block;
-  }
-  &__item + &__item{
-    padding-left: 10px;
-  }
-  &__item + &__item:before{
-    content: '/';
-    position: absolute;
-    font-size: 14px;
-    left: 1px;
-    top: 0;
-    color: #fff;
-  }
-  &__link{
-    text-decoration: none;
-    display: block;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    line-height: normal;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.65);
-    @include transition;
-    &:hover{
-      color: #fff;
-    }
-    &.active{
-      font-weight: bold;
-      color: #fff;
-    }
-  }
-}
 
 
 .tab-content {
