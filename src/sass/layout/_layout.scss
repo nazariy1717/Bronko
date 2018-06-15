@@ -52,6 +52,9 @@
   &__column{
     max-width: 380px;
     margin-bottom: 30px;
+    @media (max-width: $breakpoint-sm){
+      margin: auto auto 30px;
+    }
   }
   &__content{
     position: relative;
@@ -65,11 +68,14 @@
   }
   &__overlay-title{
     display: block;
-    padding: 0 15px;
+    padding-left: 15px;
     font-size: 22px;
     font-weight: 600;
     line-height: 45px;
     color: #fff;
+    @media (max-width: $breakpoint-lg){
+      font-size: 16px;
+    }
   }
 }
 

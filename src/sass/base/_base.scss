@@ -40,6 +40,10 @@ a{
     line-height: normal;
     color: var(--col-grey);
     margin-bottom: 10px;
+    @media (max-width: $breakpoint-sm){
+      margin-bottom: 0;
+      font-size: 18px;
+    }
   }
   &__title{
     display: block;
@@ -49,6 +53,12 @@ a{
     font-weight: normal;
     line-height: normal;
     color: var(--col-black);
+    @media (max-width: $breakpoint-md){
+      font-size: 45px;
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 36px;
+    }
     span{
       font-weight: bold;
     }

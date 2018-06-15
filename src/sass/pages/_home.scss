@@ -74,10 +74,10 @@
     margin-bottom: 50px;
   }
   &__head{
-    height: 180px;
+    //height: 180px;
     overflow: hidden;
     &.--type-2{
-      height: 235px;
+      //height: 235px;
     }
   }
   &__image{
@@ -113,14 +113,23 @@
   background: url(../img/background/home-tournaments.png) center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  @media (max-width: $breakpoint-lg){
+    img{
+      margin-bottom: 30px;
+    }
+  }
 }
 
 
 .home-form{
   position: relative;
+  max-width: 570px;
   &__input{
     border: 0;
     padding-right: 180px;
+    @media (max-width: $breakpoint-sm){
+      padding-right: 125px;
+    }
   }
   &__btn{
     position: absolute;
@@ -128,5 +137,8 @@
     top: 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+    @media (max-width: $breakpoint-sm){
+      width: 120px;
+    }
   }
 }

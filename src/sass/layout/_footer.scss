@@ -23,6 +23,11 @@
   }
   &__column{
     margin-bottom: 25px;
+    @media (max-width: $breakpoint-sm){
+      &:nth-last-of-type{
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__title{
@@ -48,6 +53,12 @@
       &:hover{
         color: var(--col-primary);
       }
+    }
+  }
+
+  &__logo{
+    @media (max-width: $breakpoint-md){
+      margin: auto auto 30px;
     }
   }
 }
@@ -95,6 +106,13 @@
 .copyright{
   padding: 30px 0;
   background-color: var(--col-black);
+
+  @media (max-width: $breakpoint-sm){
+    .column{
+      @include grid-size(100%);
+      text-align: center;
+    }
+  }
   &__txt{
     display: block;
     font-size: 14px;
