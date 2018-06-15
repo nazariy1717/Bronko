@@ -180,9 +180,25 @@
     }
   }
   &__link {
+    position: relative;
     font-size: 25px;
     color: #fff;
     @include transition;
+    &.--cart{
+      i{
+        position: absolute;
+        top: 0;
+        left: 20px;
+        padding: 0 5px;
+        vertical-align: middle;
+        height: 16px;
+        text-align: center;
+        font-size: 14px;
+        border-radius: 10px;
+        line-height: 14px;
+        background-color: var(--col-primary);
+      }
+    }
     &:hover{
       color: #afafaf;
     }
