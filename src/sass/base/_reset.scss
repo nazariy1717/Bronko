@@ -25,12 +25,14 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body{
+  position: relative;
   font-family: 'Myriad Pro', sans-serif;
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   color: var(--col-grey);
+  overflow-x: hidden;
 }
 
 ol, ul {

@@ -19,23 +19,37 @@
     cursor: initial;
     margin-left: 60%;
     margin-bottom: 65px;
+    @media (max-width: $breakpoint-xl){
+      margin-left: 50%;
+    }
+    @media (max-width: $breakpoint-lg){
+      margin-left: 0;
+      text-align: center;
+      .btn{
+        margin: auto;
+      }
+    }
   }
   &__subtitle{
     display: block;
     font-size: 36px;
     font-weight: normal;
     line-height: normal;
-    text-align: left;
     color: var(--col-black);
     margin-bottom: 10px;
+    @media (max-width: $breakpoint-sm){
+      font-size: 30px;
+    }
   }
   &__title{
     font-size: 60px;
     font-weight: normal;
     line-height: 1;
-    text-align: left;
     color: #fff;
     margin-bottom: 40px;
+    @media (max-width: $breakpoint-sm){
+      font-size: 45px;
+    }
     strong{
       font-weight: bold;
     }

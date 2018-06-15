@@ -2,7 +2,7 @@ let front = {
 
 
     hamburger: $('.hamburger'),
-    nav: $('.header-nav'),
+    nav: $('.header-mobile'),
     header_drop: $('.header-drop'),
 
 

@@ -51,6 +51,9 @@
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   transition: all 0.3s ease;
+  @media (max-width: $breakpoint-sm){
+    height: 30px;
+  }
 }
 
 .flickity-prev-next-button:focus {
@@ -62,6 +65,9 @@
   background: url(../img/carousel/slider-arr-prev.png) center no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
+  @media (max-width: $breakpoint-sm){
+    left: 0;
+  }
 }
 
 .flickity-prev-next-button.next {
@@ -69,6 +75,9 @@
   background: url(../img/carousel/slider-arr-next.png) center no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
+  @media (max-width: $breakpoint-sm){
+    right: 0;
+  }
 }
 
 
@@ -127,6 +136,15 @@
     @include transition;
     &:hover{
       background-color: var(--col-primary);
+    }
+    @media (max-width: $breakpoint-lg) {
+      width: 150px;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 90px;
+    }
+    @media (max-width: $breakpoint-sm) {
+      width: 45px;
     }
   }
   .dot + .dot {

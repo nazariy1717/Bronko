@@ -11,6 +11,13 @@ a{
 }
 
 
+
+.page{
+  position: relative;
+  overflow-x: hidden;
+}
+
+
 // text classes
 .text-right   { text-align: right;  }
 .text-center  { text-align: center; }
