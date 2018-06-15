@@ -1,6 +1,10 @@
 let front = {
+
+
     hamburger: $('.hamburger'),
-    nav: $('.header-list'),
+    nav: $('.header-nav'),
+    header_drop: $('.header-drop'),
+
 
     slider_options_default: {
         wrapAround: true,
@@ -25,12 +29,10 @@ let front = {
 
 
     headerScroll: function(){
-        if( $(window).scrollTop() > 0){
+        if( $(window).scrollTop() > 35){
             $('.header').addClass('js-fixed');
-            $('.hamburger').addClass('js-fixed');
         } else {
             $('.header').removeClass('js-fixed');
-            $('.hamburger').removeClass('js-fixed');
         }
     },
 
@@ -42,6 +44,15 @@ let front = {
         else {
             this.hamburger.removeClass("is-active");
             this.nav.toggleClass('js-show');
+        }
+    },
+
+    toogleHeaderDrop: function(){
+        if (!this.header_drop.hasClass('is-active')) {
+            this.header_drop.addClass("is-active");
+        }
+        else {
+            this.header_drop.removeClass("is-active");
         }
     },
 
@@ -76,6 +87,24 @@ let front = {
         $(document).on('click', '.hamburger', function () {
             self.toogleNav();
         });
+
+        $(document).on('click', '.header-drop__btn', function () {
+            self.toogleHeaderDrop();
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.header-drop__btn')) {
+                let dropdowns = document.getElementsByClassName("header-drop");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    let openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('is-active')) {
+                        openDropdown.classList.remove('is-active');
+                    }
+                }
+            }
+
+
+        };
 
 
     }

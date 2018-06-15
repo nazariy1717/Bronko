@@ -16,7 +16,22 @@
   }
   &__row{
     height: 35px;
+    @media (max-width: 655px){
+      height: 35px;
+      .column:nth-child(1){
+        display: none;
+      }
+      .column{
+        @include grid-size(100%);
+        text-align: center;
+      }
+    }
   }
+
+  &__right{
+    @include grid-size(290px);
+  }
+
   &__info{
     display: block;
     text-align: center;
@@ -28,6 +43,9 @@
   }
   &__list{
     text-align: right;
+    @media (max-width: 655px){
+      text-align: center;
+    }
   }
   &__list-item{
     display: inline-block;
@@ -57,6 +75,10 @@
   right: 0;
   z-index: 99;
   background-color: var(--col-black);
+  &.js-fixed{
+    position: fixed;
+    top: 0;
+  }
   &__container{
     margin: auto;
     max-width: 1310px;
@@ -103,7 +125,6 @@
 }
 
 
-
 .header-menu {
   text-align: right;
   &__item {
@@ -117,7 +138,106 @@
     color: #fff;
     @include transition;
     &:hover{
+      color: #afafaf;
+    }
+  }
+}
+
+
+.header-drop{
+  position: relative;
+  &.is-active{
+    .header-drop__icon{
+      transform: scale(-1);
+    }
+    .header-drop__block{
+      display: block;
+    }
+  }
+  &__btn{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 28px;
+    color: #afafaf;
+    padding-right: 25px;
+    @include transition;
+    &:after{
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -1px;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #afafaf;
+      border-radius: 50%;
+      @include transition;
+    }
+    &:hover{
+      color: #fff;
+      &:after{
+        border: 2px solid #fff;
+      }
+    }
+  }
+  &__icon{
+    position: absolute;
+    right: 0;
+    top: 11px;
+    font-size: 8px;
+    color: #fff;
+    @include transition;
+  }
+  &__block{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 65px;
+    width: 225px;
+    padding: 15px;
+    background-color: var(--col-black);
+    text-align: left;
+  }
+
+
+  &__list{}
+  &__item{
+    display: block;
+    margin-bottom: 25px;
+    &:nth-last-child(1){
+      margin-bottom: 0;
+      a{
+        color: var(--col-grey);
+        &:hover{
+          color: #fff;
+        }
+      }
+    }
+  }
+  &__link{
+    position: relative;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    color: #fff;
+    @include transition;
+    &:hover{
       color: var(--col-primary);
+    }
+    &.active{
+      padding-left: 20px;
+      color: var(--col-primary);
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--col-primary);
+      }
     }
   }
 }
