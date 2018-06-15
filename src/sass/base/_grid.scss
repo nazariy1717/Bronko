@@ -89,6 +89,8 @@
   }
 }
 
+
+
 @media (min-width: ($breakpoint-grid-sm)) {
   @for $i from 1 through 12{
     .col-sm-#{$i} {
@@ -122,5 +124,14 @@
     }
     .xl-offset-#{$i} {  margin-left: 8.333333% * $i; }
   }
+}
 
+
+/* small phones grid*/
+@media (max-width: (475px)) {
+  @for $i from 1 through 12{
+    .col-exs-#{$i} {
+      @include grid-size(8.333333% * $i);
+    }
+  }
 }
