@@ -5,18 +5,25 @@
 
 .camp-head{
   &__row{
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+    @media (max-width: $breakpoint-xl) {
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
   }
   &__img{
     position: absolute;
     right: 15px;
-    height: 405px;
+    &.--type-1{
+      height: 405px;
+    }
+    &.--type-2{
+      height: 470px;
+    }
     @media (max-width: $breakpoint-xl) {
       position: inherit;
-      height: inherit;
+      height: inherit!important;
       right: inherit;
       max-width: 100%;
     }
@@ -25,7 +32,16 @@
     }
   }
   &__content{
-    padding: 38px 0;
+    padding: 20px 0;
+    &.--type-1{
+      height: 405px;
+    }
+    &.--type-2{
+      height: 470px;
+    }
+    @media (max-width: $breakpoint-xl) {
+      height: inherit!important;
+    }
   }
   &__price{
     margin-bottom: 25px;
@@ -141,9 +157,8 @@
 
 
 
-#camp-map{
+.camp-map{
   height: 400px;
-  background-color: #222;
 }
 
 .camp-sign{
@@ -165,7 +180,6 @@
     }
   }
 }
-
 
 
 
@@ -222,4 +236,65 @@
   &__notify{
     margin-top: 30px;
   }
+}
+
+
+.shop-retail{
+  &__row{
+    @media (max-width: $breakpoint-lg) {
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  }
+  &__img{
+    position: absolute;
+    @media (max-width: $breakpoint-lg) {
+      max-width: 100%;
+      position: inherit;
+      right: inherit;
+      left: inherit;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin: 30px 0;
+    }
+    &.--right{
+      right: 0;
+    }
+    &.--left{
+      left: 0;
+    }
+  }
+  &__contacts{
+    height: 345px;
+    @media (max-width: $breakpoint-lg) {
+      height: 300px;
+    }
+    @media (max-width: $breakpoint-md) {
+      height: initial;
+      margin: 30px 0;
+    }
+  }
+  &__title{
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: normal;
+    color: var(--col-black);
+    margin-bottom: 25px;
+  }
+  &__item{
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    i{
+      position: absolute;
+      left: 0;
+      font-size: 18px;
+      color: var(--col-black);
+    }
+  }
+  &__{}
 }
