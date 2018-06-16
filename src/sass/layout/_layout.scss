@@ -173,3 +173,149 @@
 }
 
 
+.app-testimonials{
+  position: relative;
+  &__carousel{
+    padding: 0 100px;
+    margin-bottom: 50px;
+    @media (max-width: $breakpoint-lg) {
+      padding: 0 50px;
+    }
+    @media (max-width: $breakpoint-md) {
+      padding: 0 30px;
+    }
+    .flickity-prev-next-button.previous {
+      left: 0;
+      background: url(../img/carousel/slider-arr-prev-grey.png) center no-repeat;
+      background-size: contain;
+      @media (max-width: $breakpoint-md) {
+        left: -10px;
+      }
+    }
+    .flickity-prev-next-button.next {
+      right: 0;
+      background: url(../img/carousel/slider-arr-next-grey.png) center no-repeat;
+      background-size: contain;
+      @media (max-width: $breakpoint-md) {
+        right: -10px;
+      }
+    }
+  }
+  &__cell{
+    width: 50%;
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
+  }
+  &__image-column{
+    @include grid-size(100px);
+  }
+
+  &__content-column{
+    @include grid-size(calc(100% - 100px));
+  }
+  &__image{
+    max-width: 70px;
+    border-radius: 50%;
+  }
+  &__title{
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    color: var(--col-black);
+  }
+  &__subtitle{
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.56;
+    color: var(--col-grey);
+    margin-bottom: 20px;
+  }
+}
+
+
+
+.page-tabs{
+  &__list{
+    border-bottom: 1px solid #d8d8d8;
+  }
+  &__list-item{
+    display: inline-block;
+    @media (max-width: $breakpoint-md) {
+      width: 49%;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+    }
+    & + &{
+      margin-left: 70px;
+      @media (max-width: $breakpoint-xl) {
+        margin-left: 45px;
+      }
+      @media (max-width: $breakpoint-lg) {
+        margin-left: 20px;
+      }
+      @media (max-width: $breakpoint-md) {
+        margin-left: 0;
+      }
+    }
+  }
+  &__list-link{
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    color: #a0a0a0;
+    padding-bottom: 5px;
+    @include transition;
+    @media (max-width: $breakpoint-lg) {
+      font-size: 16px;
+    }
+    @media (max-width: $breakpoint-md) {
+      text-align: center;
+    }
+    &.active{
+      color: var(--col-black);
+      &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        background-color: var(--col-black);
+      }
+    }
+    &:hover{
+      color: var(--col-black);
+    }
+  }
+
+  &__content{
+    padding-top: 40px;
+  }
+}
+
+
+.tab-content {
+  display: none;
+  animation: fadeEffect .5s;
+  -webkit-animation: fadeEffect .5s;
+  &.active{
+    display: block;
+  }
+}
+
+
+
+
+
+
+

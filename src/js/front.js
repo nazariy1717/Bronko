@@ -60,7 +60,7 @@ let front = {
     openTab: function (element, tabName, parent) {
         let i, tab_content, tab_links;
 
-        tab_content = $(element).closest(parent).find('.tabs-wrap').find('.tab-content');
+        tab_content = $(element).closest(parent).find('.page-tabs__wrap').find('.tab-content');
         for (i = 0; i < tab_content.length; i++) {
             tab_content[i].style.display = "none";
         }
