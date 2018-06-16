@@ -99,7 +99,7 @@
     background-color: #fff;
     @include transition;
     &.--type-2{
-      max-width: 380px;
+      max-width: 350px;
       @media (max-width: $breakpoint-sm){
         margin: auto;
       }

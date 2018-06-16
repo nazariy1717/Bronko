@@ -1,3 +1,28 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
+.camp-steps{
+  text-align: center;
+  margin-bottom: 30px;
+  &__head{
+    height: 105px;
+    margin-bottom: 30px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 10px;
+    }
+  }
+  &__title{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: var(--col-primary);
+    margin-bottom: 15px;
+  }
+  &__txt{
+    max-width: 300px;
+    margin: auto;
+  }
+  &__{}
+}
