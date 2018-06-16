@@ -136,7 +136,9 @@ a{
     padding: 60px 0 50px;
   }
   &.--background{
-    background-color: #222;
+    background: center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
   &.--grey-background{
     background-color: var(--col-light-gray);

@@ -19,7 +19,15 @@
 
 /*******/
 
-
+.icon-close:before {
+  content: "\e90c";
+}
+.icon-calendar:before {
+  content: "\e909";
+}
+.icon-people:before {
+  content: "\e90a";
+}
 .icon-chevron-down:before {
   content: "\e903";
 }
@@ -46,4 +54,7 @@
 }
 .icon-location:before {
   content: "\e947";
+}
+.icon-location2:before {
+  content: "\e90b";
 }

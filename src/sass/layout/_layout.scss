@@ -39,6 +39,7 @@
   background-size: cover;
 }
 
+
 .breadcrumbs{
   position: relative;
   &__list{
@@ -134,7 +135,7 @@
 
 
 
-.app-training{
+.page-column{
   &__column{
     max-width: 380px;
     margin-bottom: 30px;
@@ -151,6 +152,12 @@
   }
   &__overlay{
     background-color: #111626;
+    &.--white{
+      background-color: #fff;
+      .page-column__overlay-title{
+        color: var(--col-black);
+      }
+    }
   }
   &__overlay-title{
     display: block;

@@ -1,6 +1,8 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
+
+
 .camp-steps{
   text-align: center;
   margin-bottom: 30px;
@@ -24,5 +26,64 @@
     max-width: 300px;
     margin: auto;
   }
+}
+
+
+.camp-data{
+  padding: 60px 0 30px 0;
+  background-color: var(--col-light-gray);
+  &__column{
+    margin-bottom: 30px;
+  }
+  &__txt{
+    position: relative;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    color: var(--col-grey);
+    @media (max-width: $breakpoint-xl) {
+      text-align: center;
+    }
+  }
+  &__icon{
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    font-size: 24px;
+    color: var(--col-black);
+    margin-right: 5px;
+  }
   &__{}
+  &__{}
+  &__{}
+  &__{}
+}
+
+
+
+#camp-map{
+  height: 400px;
+  background-color: #222;
+}
+
+.camp-sign{
+  position: relative;
+  background: url("../img/background/camp-sign-bg.png")center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  &__overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  @media (max-width: $breakpoint-sm){
+    .btn:nth-of-type(1){
+      margin-bottom: 15px;
+    }
+  }
+
 }
