@@ -97,6 +97,8 @@
   }
   &__title{
     display: block;
+    max-width: 255px;
+    margin: auto;
     font-size: 20px;
     font-weight: 600;
     line-height: normal;
@@ -163,7 +165,7 @@
 
 .camp-sign{
   position: relative;
-  background: url("../img/background/camp-sign-bg.png")center no-repeat;
+  background: center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   &__overlay{
