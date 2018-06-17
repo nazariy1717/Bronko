@@ -18,7 +18,15 @@
 
 
 /*******/
-
+.icon-performance:before {
+  content: "\e90d";
+}
+.icon-safety:before {
+  content: "\e90e";
+}
+.icon-comfort:before {
+  content: "\e90f";
+}
 .icon-close:before {
   content: "\e90c";
 }

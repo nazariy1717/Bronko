@@ -2,7 +2,6 @@
 @import "../tools/breakpoints";
 
 
-
 .camp-head{
   &__row{
     @media (max-width: $breakpoint-xl) {
@@ -158,10 +157,10 @@
 }
 
 
-
 .camp-map{
   height: 400px;
 }
+
 
 .camp-sign{
   position: relative;
@@ -176,6 +175,10 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
   }
+  &__content{
+    position: relative;
+    z-index: 3;
+  }
   @media (max-width: $breakpoint-sm){
     .btn:nth-of-type(1){
       margin-bottom: 15px;
@@ -183,6 +186,103 @@
   }
 }
 
+
+
+
+.shop-subscript{
+
+  &__column{
+    height: 380px;
+    @media (max-width: $breakpoint-lg) {
+      height: initial;
+    }
+  }
+  &__wrap{
+    padding: 0 40px;
+    @media (max-width: $breakpoint-xl) {
+      padding: 0 15px;
+    }
+    @media (max-width: $breakpoint-lg) {
+      padding: 15px;
+      .shop-subscript__title{
+        @include text-ellipsis(initial);
+      }
+    }
+  }
+  &__subtitle{
+    display: block;
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: normal;
+    color: var(--col-grey);
+    margin-bottom: 15px;
+  }
+  &__title{
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: normal;
+    color: var(--col-primary);
+    @include text-ellipsis(2);
+    @media (max-width: $breakpoint-xl) {
+      font-size: 22px;
+    }
+    &.--modifier{
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content{
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+    background: center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    &:hover{
+      .shop-subscript__caption{
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__caption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    transform: translateY(240px);
+    padding: 18px 0;
+    background-color: rgba(255,255,255,0.9);
+    transition: all 0.3s ease-out;
+  }
+}
+
+
+
+
+
+.shop-benefits{
+  background-color: #e6e6e6;
+  &__column{
+    margin-bottom: 50px;
+    img{
+      margin-bottom: 20px;
+    }
+  }
+  &__txt{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.44;
+    color: var(--col-black);
+  }
+}
 
 
 .shop-table{
