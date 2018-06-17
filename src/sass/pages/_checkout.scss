@@ -60,6 +60,18 @@
         width: 50%;
         height: 3px;
         background-color: var(--col-primary);
+        @media (max-width: $breakpoint-sm){
+          display: none!important;
+        }
+      }
+    }
+    @media (max-width: $breakpoint-sm){
+      display: none;
+      &:before, &:after{
+        display: none!important;
+      }
+      &.active{
+        display: block!important;
       }
     }
     &.prev{
@@ -71,15 +83,8 @@
       .checkout-head__title{
         color: var(--col-grey);
       }
-    }
-
-    @media (max-width: $breakpoint-sm){
-      display: none;
-      &:before, &:after{
+      @media (max-width: $breakpoint-sm){
         display: none!important;
-      }
-      &.active{
-        display: block!important;
       }
     }
 
