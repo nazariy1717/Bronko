@@ -109,5 +109,114 @@
     line-height: 1.39;
     color: #d8d8d8;
   }
-  &__{}
+
+
+}
+
+
+.checkout-order{
+  &__content{
+    border: 1px solid #d4d4d4;
+    padding: 15px 30px;
+    margin-bottom: 40px;
+  }
+  &__block{
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d4d4d4;
+    margin-bottom: 15px;
+  }
+  &__row{
+    &.--head{
+      margin-bottom: 15px;
+      @media (max-width: $breakpoint-md){
+        display: none;
+      }
+      span{
+        font-weight: 600;
+        color: var(--col-black);
+      }
+    }
+    span{
+      display: block;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 1.25;
+      text-align: left;
+      color: var(--col-grey);
+    }
+    .column{
+      &:nth-child(1){
+        @include grid-size(33.33333%);
+      }
+      &:nth-child(2){
+        @include grid-size(25%);
+      }
+      &:nth-child(3){
+        @include grid-size(8.33333%);
+      }
+      &:nth-child(4){
+        @include grid-size(16.66667%);
+      }
+      &:nth-child(5){
+        @include grid-size(16.66667%);
+      }
+
+      @media (max-width: $breakpoint-md){
+        @include grid-size(100%!important);
+        padding-left: 90px;
+        position: relative;
+        &:before{
+          content: attr(data-head) ": ";
+          position: absolute;
+          left: 0;
+          font-size: 16px;
+          font-weight: 600;
+          color: var(--col-black);
+        }
+      }
+    }
+  }
+
+  .checkout-total{
+    margin-right: 90px;
+    @media (max-width: $breakpoint-xl){
+      margin-right: 0;
+      .checkout-total__row{
+        span:nth-child(1){
+          text-align: left;
+        }
+      }
+    }
+
+  }
+
+  &__total-row{
+    @media (max-width: $breakpoint-xl){
+      justify-content: left;
+    }
+  }
+
+}
+
+.checkout-total{
+  width: 270px;
+  &__row{
+    span{
+      display: block;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 1.56;
+      color: var(--col-grey);
+    }
+    span:nth-child(1){
+      @include grid-size(200px);
+      text-align: right;
+      font-weight: 600;
+      color: var(--col-black);
+    }
+    span:nth-child(2){
+      @include grid-size(100px);
+      text-align: left;
+    }
+  }
 }
