@@ -91,6 +91,14 @@ let front = {
             self.toogleHeaderDrop();
         });
 
+        $(document).on('click', '.js-panel-head', function () {
+
+            $(this).parent().toggleClass('js-active');
+            $(this).parent().find('.js-panel-content').slideToggle();
+
+        });
+
+
         window.onclick = function (event) {
             if (!event.target.matches('.header-drop__btn')) {
                 let dropdowns = document.getElementsByClassName("header-drop");

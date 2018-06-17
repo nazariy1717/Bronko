@@ -326,6 +326,73 @@
 }
 
 
+.faq{
+  &__block{
+    border-bottom: 1px solid #eef0f2;
+    &.js-active{
+      .faq__icon{
+        &:after{
+          top: 100%;
+        }
+      }
+    }
+  }
+  &__head{
+    position: relative;
+    padding: 15px 20px 15px 0;
+  }
+  &__icon{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+    &:before,&:after{
+      content: '';
+      position: absolute;
+      background-color: var(--col-primary);
+      @include transition;
+    }
+    &:before{
+      height: 2px;
+      left: 0;
+      right: 0;
+      top: 6px;
+    }
+    &:after{
+      height: 100%;
+      width: 2px;
+      bottom: 0;
+      top: 0;
+      left: 7px;
+    }
+
+  }
+  &__content{
+    padding-bottom: 20px;
+    .app-txt + .app-txt {
+      margin-top: 10px;
+    }
+  }
+  &__title{
+    display: block;
+    font-family: 'Myriad Pro', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    color: var(--col-black);
+    @media (max-width: $breakpoint-md) {
+      font-size: 18px;
+    }
+    @media (max-width: $breakpoint-sm) {
+      font-size: 16px;
+    }
+  }
+}
+
+
 
 
 
