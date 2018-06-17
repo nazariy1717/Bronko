@@ -1,0 +1,108 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.checkout{
+  padding: 55px 0;
+}
+
+.checkout-head{
+  &__column{
+    position: relative;
+    margin-bottom: 50px;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 50%;
+      right: 0;
+      top: 18px;
+      height: 3px;
+      width: 100%;
+      z-index: -1;
+      background-color: #d8d8d8;
+    }
+    &:last-of-type{
+      &:before, &:after{
+        display: none;
+      }
+    }
+    &.active{
+      &:after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        right: 0;
+        top: 18px;
+        height: 3px;
+        width: 50%;
+        z-index: -1;
+        background-color: var(--col-primary);
+      }
+      .checkout-head__step{
+        background-color: var(--col-primary);
+      }
+      .checkout-head__title{
+        color: var(--col-primary);
+      }
+    }
+
+    &.active:nth-child(2){
+      &:after{
+        left: 0;
+        width: 100%;
+      }
+    }
+    &.active:nth-child(3){
+      &:after{
+        display: block!important;
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 50%;
+        height: 3px;
+        background-color: var(--col-primary);
+      }
+    }
+    &.prev{
+      .checkout-head__step{
+        border: 1px solid var(--col-primary);
+        color: var(--col-primary);
+        background-color: #fff;
+      }
+      .checkout-head__title{
+        color: var(--col-grey);
+      }
+    }
+
+    @media (max-width: $breakpoint-sm){
+      display: none;
+      &:before, &:after{
+        display: none!important;
+      }
+      &.active{
+        display: block!important;
+      }
+    }
+
+  }
+  &__step{
+    width: 40px;
+    height: 40px;
+    margin: auto auto 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    background-color: #d8d8d8;
+  }
+  &__title{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.39;
+    color: #d8d8d8;
+  }
+  &__{}
+}
