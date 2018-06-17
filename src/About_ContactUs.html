@@ -314,7 +314,39 @@
 </div>
 
 <script src="js/libs/jquery-3.2.1.min.js"></script>
+<script src="js/libs/jquery.validate.js"></script>
 <script src="js/front.js"></script>
+<script type="text/javascript">
+    jQuery.validator.addMethod("fullEmail", function (value, element) {
+        return this.optional(element) || /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value);
+    }, 'Enter the correct email address.');
+</script>
+<script type="text/javascript">
+    $('#contact_form').validate({
+        errorClass: "error-valid",
+        errorElement: "span",
+        errorPlacement: function (error, element) {
+            console.log(element);
+            $(element).parent().append(error);
+        },
+        rules: {
+            name: {
+                required: true,
+                minlength: 2,
+            },
+            email: {
+                required: true,
+                fullEmail: true,
+                minlength: 2,
+            }
+        },
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
+</script>
+
+
 
 </body>
 </html>
