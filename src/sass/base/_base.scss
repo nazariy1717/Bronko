@@ -129,6 +129,32 @@ strong{
   }
 }
 
+
+.quote{
+  margin-bottom: 20px;
+  &.--white{
+   .quote__title{
+     color: #fff;
+   }
+   .quote__txt{
+     color: #d4d4d4;
+   }
+  }
+  &__title{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    color: var(--col-grey);
+  }
+  &__txt{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.56;
+    color: var(--col-grey);
+  }
+}
+
 // end of text classes
 
 .image{
