@@ -1,0 +1,45 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+.registration{
+  text-align: center;
+  &__title{
+    display: block;
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: normal;
+    color: var(--col-black);
+    margin-bottom: 20px;
+    @media (max-width: $breakpoint-md){
+      font-size: 45px;
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 36px;
+    }
+    span{
+      font-weight: bold;
+    }
+  }
+  &__subtitle{
+    display: block;
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.25;
+    color: var(--col-grey);
+    margin-bottom: 40px;
+  }
+  &__wrap{
+    height: 490px;
+    padding: 20px 30px 20px 20px;
+    overflow-y: scroll;
+    border-radius: 3px;
+    border: solid 1px #d4d4d4;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  &__{}
+}
