@@ -3,7 +3,7 @@
 
 
 .top-bar{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -70,15 +70,15 @@
 
 
 .header{
-  position: absolute;
+  position: fixed;
   top: 35px;
   left: 0;
   right: 0;
   z-index: 99;
   background-color: var(--col-black);
   &.js-fixed{
-    position: fixed;
-    top: 0;
+    //position: fixed;
+    //top: 0;
   }
   &__container{
     margin: auto;
@@ -96,6 +96,7 @@
   }
 }
 
+
 .header-nav{
   text-align: center;
   &__item{
@@ -105,38 +106,173 @@
       margin-bottom: 25px;
     }
     & + & {
-      margin-left: 35px;
-      @media (max-width: $breakpoint-lg) {
-        margin-left: 0;
+      //margin-left: 35px;
+      //@media (max-width: $breakpoint-lg) {
+      //  margin-left: 0;
+      //}
+    }
+    &:hover{
+      > .header-megamenu{
+        display: block;
       }
     }
   }
   &__link{
     position: relative;
+    padding: 40px 15px;
     display: block;
     font-size: 16px;
     font-weight: bold;
     line-height: normal;
     color: #fff;
     @include transition;
+    @media (max-width: $breakpoint-lg) {
+      padding: 5px;
+    }
     &.active{
       &:after{
         content: '';
         position: absolute;
         left: 50%;
         margin-left: -5px;
-        bottom: -15px;
+        bottom: 25px;
         width: 10px;
         height: 10px;
         border-radius: 50%;
         background-color: var(--col-primary);
+        @media (max-width: $breakpoint-lg) {
+          bottom: -10px;
+        }
       }
     }
     &:hover{
       color: var(--col-primary);
+
     }
   }
 }
+
+
+.header-megamenu{
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 135px;
+  background-color: #fff;
+  @media (max-width: $breakpoint-lg) {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+  }
+  &__container{
+    margin: auto;
+    padding: 0 15px;
+    max-width: 1310px;
+  }
+  &__wrap{
+    padding: 35px 0 120px 0;
+    @media (max-width: $breakpoint-lg) {
+      padding: 20px 0 0 0;
+    }
+  }
+
+  &__bottom{
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background-color: var(--col-primary);
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+  &__title{
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: normal;
+    text-align: left;
+    color: var(--col-black);
+    margin-bottom: 30px;
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+  &__column{
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+  &__list{
+    text-align: left;
+    @media (max-width: $breakpoint-lg) {
+      text-align: center;
+    }
+  }
+  &__list-item{
+    display: block;
+  }
+  &__list-link{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.88;
+    color: var(--col-grey);
+    @include transition;
+    &:hover{
+      color: var(--col-primary);
+    }
+  }
+  &__block{
+    max-width: 270px;
+    margin: auto;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    &:hover{
+      box-shadow: 0 11px 25px -3px rgba(0, 0, 0, 0.15);
+      .header-megamenu__caption{
+        color: var(--col-primary);
+      }
+    }
+  }
+  &__caption{
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+    color: var(--col-black);
+    @include transition;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
 
 
 .header-mobile{
@@ -144,13 +280,13 @@
     position: absolute;
     top: 50px;
     right: -17px;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     bottom: 0;
     width: 300px;
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: var(--col-black);
-    padding-bottom: 30px;
+    padding-bottom: 45px;
     transform: translateX(300px);
     @include transition;
     &.js-show{
