@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <title>Checkout Step 1</title>
+    <title>Register an Account 2</title>
     <meta name="description" content="">
     <link href="css/build.css" rel="stylesheet">
 </head>
@@ -393,7 +393,6 @@
         </div>
     </header>
 
-
     <section class="app-head-sm display-table">
         <div class="display-table__cell">
             <div class="container">
@@ -403,10 +402,7 @@
                             <a href="/" class="breadcrumbs__link">HOME</a>
                         </li>
                         <li class="breadcrumbs__item">
-                            <a href="/" class="breadcrumbs__link">Shopping Cart</a>
-                        </li>
-                        <li class="breadcrumbs__item">
-                            <a href="/" class="breadcrumbs__link active">Checkout</a>
+                            <a href="/" class="breadcrumbs__link active">Register an Account</a>
                         </li>
                     </ul>
                 </div>
@@ -414,155 +410,158 @@
         </div>
     </section>
 
-    <div class="checkout">
+    <section class="section registration">
         <div class="container">
-            <div class="checkout-head">
-                <div class="row m-row">
-                    <div class="column col-sm-4 col-xs-12 checkout-head__column active">
-                        <div class="checkout-head__step">1</div>
-                        <span class="checkout-head__title">Billing & Shipping Address</span>
+
+            <h1 class="registration__title"><span>Register an</span> Account</h1>
+            <p class="registration__subtitle">Create a Bronko account to access the Bronko Skills Center Platform, sign up for Upcoming Camps or to quickly and conveniently order products and review your order history.</p>
+
+
+
+            <form action="/" id="registration_step_2">
+                <span class="app-title-sm">Contact Info</span>
+
+                <div class="row m-row mb-40">
+                    <div class="column col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="first_name" class="form__label">
+                                First Name
+                                <i class="form__label-required">*</i>
+                            </label>
+                            <input type="text" class="form__input" name="first_name" id="first_name" placeholder="John">
+                        </div>
                     </div>
-                    <div class="column col-sm-4 col-xs-12 checkout-head__column">
-                        <div class="checkout-head__step">2</div>
-                        <span class="checkout-head__title">Payment Information</span>
+                    <div class="column col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="last_name" class="form__label">
+                                Last Name
+                                <i class="form__label-required">*</i>
+                            </label>
+                            <input type="text" class="form__input" name="last_name" id="last_name" placeholder="Doe">
+                        </div>
                     </div>
-                    <div class="column col-sm-4 col-xs-12 checkout-head__column">
-                        <div class="checkout-head__step">3</div>
-                        <span class="checkout-head__title">Order Confirmation</span>
+                    <div class="column col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="email" class="form__label">
+                                Email
+                                <i class="form__label-required">*</i>
+                            </label>
+                            <input type="email" class="form__input" name="email" id="email" placeholder="johndoe@me.com">
+                        </div>
+                    </div>
+                    <div class="column col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="phone" class="form__label">
+                                Phone Number
+                                <i class="form__label-required">*</i>
+                            </label>
+                            <input type="text" class="form__input" name="phone" id="phone" placeholder="647-913-7650">
+                        </div>
+                    </div>
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="company" class="form__label">Company</label>
+                            <input type="text" class="form__input" name="company" id="company" placeholder="Company Name">
+                        </div>
+                    </div>
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="address" class="form__label">
+                                Address
+                                <i class="form__label-required">*</i>
+                            </label>
+                            <input type="text" class="form__input" name="address" id="address" placeholder="9100 Yonge St.">
+                        </div>
+                    </div>
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="city" class="form__label">
+                                City
+                                <i class="form__label-required">*</i>
+                            </label>
+                            <input type="text" class="form__input" name="city" id="city" placeholder="Toronto">
+                        </div>
+                    </div>
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="postal_code" class="form__label">
+                                Postal Code
+                                <i class="form__label-required">*</i>
+                            </label>
+                            <input type="text" class="form__input" name="postal_code" id="postal_code" placeholder="N2J 0Y6">
+                        </div>
+                    </div>
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="country" class="form__label">
+                                Country
+                                <i class="form__label-required">*</i>
+                            </label>
+                            <select name="country" id="country" class="form__select">
+                                <option value="0">Canada</option>
+                                <option value="1">Canada</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="state" class="form__label">
+                                Province/State
+                                <i class="form__label-required">*</i>
+                            </label>
+                            <select name="state" id="state" class="form__select">
+                                <option value="0">Ontario</option>
+                                <option value="1">Ontario</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="checkout__content">
-                <span class="app-title-sm">Billing & Shipping Address</span>
-                <form action="/" id="checkout_step_1">
-                    <div class="mb-40">
-                        <div class="radio__form">
-                            <input type="radio" name="choose_address" id="choose_address_1" checked>
-                            <label for="choose_address_1">Use an existing address</label>
-                            <div class="check"></div>
-                        </div>
-                        <div class="radio__form">
-                            <input type="radio" name="choose_address" id="choose_address_2">
-                            <label for="choose_address_2">Use a new address</label>
-                            <div class="check"></div>
+                <span class="app-title-sm">CREATE PASSWORD</span>
+
+                <div class="row m-row">
+                    <div class="column col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="password" class="form__label">
+                                Password
+                                <i class="form__label-required">*</i>
+                            </label>
+                            <input type="password" class="form__input" name="password" id="password" placeholder="• • • • • • • • • •">
                         </div>
                     </div>
-                    <div class="row m-row">
-                        <div class="column col-md-6 col-sm-6 col-xs-12">
-                            <div class="form__group-20">
-                                <label for="first_name" class="form__label">
-                                    First Name
-                                    <i class="form__label-required">*</i>
-                                </label>
-                                <input type="text" class="form__input" name="first_name" id="first_name" placeholder="John">
-                            </div>
+                    <div class="column col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="last_name" class="form__label">
+                                Confirm Password
+                                <i class="form__label-required">*</i>
+                            </label>
+                            <input type="password" class="form__input" name="password_confirm" id="password_confirm" placeholder="• • • • • • • • • •">
                         </div>
-                        <div class="column col-md-6 col-sm-6 col-xs-12">
-                            <div class="form__group-20">
-                                <label for="last_name" class="form__label">
-                                    Last Name
-                                    <i class="form__label-required">*</i>
-                                </label>
-                                <input type="text" class="form__input" name="last_name" id="last_name" placeholder="Doe">
-                            </div>
-                        </div>
-                        <div class="column col-md-6 col-sm-6 col-xs-12">
-                            <div class="form__group-20">
-                                <label for="email" class="form__label">
-                                    Email
-                                    <i class="form__label-required">*</i>
-                                </label>
-                                <input type="email" class="form__input" name="email" id="email" placeholder="johndoe@me.com">
-                            </div>
-                        </div>
-                        <div class="column col-md-6 col-sm-6 col-xs-12">
-                            <div class="form__group-20">
-                                <label for="phone" class="form__label">
-                                    Phone Number
-                                    <i class="form__label-required">*</i>
-                                </label>
-                                <input type="text" class="form__input" name="phone" id="phone" placeholder="647-913-7650">
-                            </div>
-                        </div>
-                        <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                            <div class="form__group-20">
-                                <label for="company" class="form__label">Company</label>
-                                <input type="text" class="form__input" name="company" id="company" placeholder="Company Name">
-                            </div>
-                        </div>
-                        <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                            <div class="form__group-20">
-                                <label for="address" class="form__label">
-                                    Address
-                                    <i class="form__label-required">*</i>
-                                </label>
-                                <input type="text" class="form__input" name="address" id="address" placeholder="9100 Yonge St.">
-                            </div>
-                        </div>
-                        <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                            <div class="form__group-20">
-                                <label for="city" class="form__label">
-                                    City
-                                    <i class="form__label-required">*</i>
-                                </label>
-                                <input type="text" class="form__input" name="city" id="city" placeholder="Toronto">
-                            </div>
-                        </div>
-                        <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                            <div class="form__group-20">
-                                <label for="postal_code" class="form__label">
-                                    Postal Code
-                                    <i class="form__label-required">*</i>
-                                </label>
-                                <input type="text" class="form__input" name="postal_code" id="postal_code" placeholder="N2J 0Y6">
-                            </div>
-                        </div>
-                        <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                            <div class="form__group-20">
-                                <label for="country" class="form__label">
-                                    Country
-                                    <i class="form__label-required">*</i>
-                                </label>
-                                <select name="country" id="country" class="form__select">
-                                    <option value="0">Canada</option>
-                                    <option value="1">Canada</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                            <div class="form__group-20">
-                                <label for="state" class="form__label">
-                                    Province/State
-                                    <i class="form__label-required">*</i>
-                                </label>
-                                <select name="state" id="state" class="form__select">
-                                    <option value="0">Ontario</option>
-                                    <option value="1">Ontario</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="column col-xs-12">
-                            <div class="form__group-30">
-                                <div class="checkbox">
-                                    <input type="checkbox" name="shipping_address" id="shipping_address">
-                                    <label for="shipping_address">My Shipping Address is the same as my Billing Address.</label>
-                                </div>
+                    </div>
+                    <div class="column col-xs-12">
+                        <div class="form__group-30">
+                            <div class="checkbox">
+                                <input type="checkbox" id="agree" name="agree">
+                                <label for="agree">I have read and agree to the <a href="/" class="app-link">Terms and Conditions.</a></label>
                             </div>
                         </div>
                     </div>
-                    <div class="row m-row align-center">
-                        <div class="column">
-                            <a href="/" class="btn btn-primary --black mb-10">BACK</a>
-                        </div>
-                        <div class="column">
-                            <button type="submit" class="btn btn-primary mb-10">CONTINUE</button>
-                        </div>
+                </div>
+
+                <div class="row m-row align-center">
+                    <div class="column">
+                        <a href="/" class="btn btn-primary --black">CANCEL</a>
                     </div>
-                </form>
-            </div>
+                    <div class="column">
+                        <button type="submit" class="btn btn-primary">CREATE ACCOUNT</button>
+                    </div>
+                </div>
+
+            </form>
+
         </div>
-    </div>
+    </section>
+
 
     <footer class="footer">
         <div class="footer__overlay"></div>
@@ -671,7 +670,7 @@
     }, 'Enter the correct email address.');
 </script>
 <script type="text/javascript">
-    $('#checkout_step_1').validate({
+    $('#registration_step_2').validate({
         errorClass: "error-valid",
         errorElement: "span",
         errorPlacement: function (error, element) {
@@ -715,7 +714,18 @@
             state: {
                 required: true
             },
-
+            password: {
+                required: true,
+                minlength: 6
+            },
+            password_confirm: {
+                required: true,
+                minlength: 6,
+                equalTo: password
+            },
+            agree: {
+                required: true
+            },
 
         },
         submitHandler: function (form) {
