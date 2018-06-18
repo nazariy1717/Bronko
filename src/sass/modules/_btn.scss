@@ -32,6 +32,9 @@
   &.--black{
     background-color: var(--col-black);
   }
+  &.--grey{
+    background-color: var(--col-grey);
+  }
   &:hover{
     box-shadow: 0 0 13px rgba(78, 78, 78, 0.2);
   }
