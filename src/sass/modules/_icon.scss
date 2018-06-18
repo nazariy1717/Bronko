@@ -18,6 +18,15 @@
 
 
 /*******/
+.icon-spin:before {
+  content: "\e910";
+}
+.icon-slider-prev:before {
+  content: "\e911";
+}
+.icon-slider-next:before {
+  content: "\e912";
+}
 .icon-performance:before {
   content: "\e90d";
 }

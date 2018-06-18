@@ -92,10 +92,8 @@ let front = {
         });
 
         $(document).on('click', '.js-panel-head', function () {
-
             $(this).parent().toggleClass('js-active');
             $(this).parent().find('.js-panel-content').slideToggle();
-
         });
 
 
@@ -109,9 +107,32 @@ let front = {
                     }
                 }
             }
-
-
         };
+
+
+
+        $(document).on('click', '.spin__button-plus', function () {
+
+            let $input = $(this).parent().find('input');
+            let inputValue = $(this).parent().find('input').val();
+            inputValue++;
+            if(inputValue > 1){
+                $(this).parent().find('.spin__button-minus').removeAttr('disabled');
+            }
+            $input.val(inputValue);
+
+        });
+
+        $(document).on('click', '.spin__button-minus', function () {
+            let $input = $(this).parent().find('input');
+            let inputValue = $(this).parent().find('input').val();
+            if(inputValue == 1){
+                $(this).attr('disabled')
+            } else {
+                inputValue--;
+            }
+            $input.val(inputValue);
+        });
 
 
     }

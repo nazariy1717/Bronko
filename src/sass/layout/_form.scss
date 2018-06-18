@@ -264,3 +264,62 @@ input[type=radio]:checked ~ label {
 
 }
 
+
+.spin{
+  position: relative;
+  max-width: 70px;
+  background-color: #fff;
+  &__input{
+    width: 70px;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+    color: var(--col-grey);
+    padding: 0 25px 0 15px;
+    border: solid 1px #d4d4d4;
+    background-color: #fff;
+  }
+  &__button{
+    position: absolute;
+    border: solid 1px #d4d4d4;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 7px;
+    color: var(--col-black);
+    background-color: #f4f4f4;
+    @include transition;
+    &:active{
+      background-color: var(--col-grey);
+    }
+    & + &{
+      border-top: 0;
+    }
+    &[disabled]{
+      opacity: 0.5;
+    }
+    &:before{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  &__button-plus{
+    top: 0;
+    border-top-right-radius: 3px;
+  }
+  &__button-minus{
+    bottom: 0;
+    border-bottom-right-radius: 3px;
+    &:before{
+      transform: translate(-50%,-50%) scale(-1);
+    }
+  }
+}
+
