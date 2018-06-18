@@ -418,18 +418,98 @@
 
 
 
-    <section class="section">
+    <section class="belt-head">
         <div class="container">
 
-            <div class="spin">
-                <button class="spin__button spin__button-plus icon-spin"></button>
-                <button class="spin__button spin__button-minus icon-spin" disabled></button>
-                <input type="number" value="1" name="input-spin" class="spin__input" disabled="disabled">
+            <div class="row m-row">
+                <div class="column col-lg-7 col-xs-12">
+                    <div class="belt-head__carousel">
+                        <div class="belt-head__carousel-cell" style="background-image: url(img/belt-main-img.png);"></div>
+                        <div class="belt-head__carousel-cell" style="background-image: url(img/belt-main-img.png);"></div>
+                        <div class="belt-head__carousel-cell" style="background-image: url(img/belt-main-img.png);"></div>
+                        <div class="belt-head__carousel-cell" style="background-image: url(img/belt-main-img.png);"></div>
+                    </div>
+
+                    <div class="belt-head__navcarousel">
+                        <div class="belt-head__navcarousel-cell">
+                            <img src="img/shop/belt-main-small.png" class="image m-auto">
+                        </div>
+                        <div class="belt-head__navcarousel-cell">
+                            <img src="img/shop/belt-cell-2.png" class="image m-auto">
+                        </div>
+                        <div class="belt-head__navcarousel-cell">
+                            <img src="img/shop/belt-cell-3.png" class="image m-auto">
+                        </div>
+                        <div class="belt-head__navcarousel-cell">
+                            <img src="img/shop/belt-main-small.png" class="image m-auto">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column col-lg-5 col-xs-12">
+                    <div class="belt-head__content">
+                        <div class="title-block ">
+                            <span class="title-block__subtitle">Shop</span>
+                            <h2 class="title-block__title"><span>BRONKO BELT</span> RTI</h2>
+                        </div>
+                        <span class="belt-head__subtitle">Hockey’s High Performance Weighted Training Belt</span>
+                        <div class="camp-head__price">
+                            <span>$129.99+</span>
+                        </div>
+                        <div class="belt-head__text-content">
+                            <p class="app-txt">The Bronko Belt RTI is used by a growing number of pro, junior and youth players across North America to help develop functional strength, speed and endurance that directly impacts on-ice performance.</p>
+                            <p class="app-txt">The Bronko Belt RTI is the first and only weighted training belt specifically designed for hockey players. It is a simple and effective way for players to develop the leg and core muscles used during skating.</p>
+                        </div>
+                        <div class="row m-row  belt-head__row --type-1">
+                            <div class="column">
+                                <div class="spin">
+                                    <button class="spin__button spin__button-plus icon-spin"></button>
+                                    <button class="spin__button spin__button-minus icon-spin"></button>
+                                    <input type="number" value="1" name="input-spin" class="spin__input" disabled="disabled">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="belt-head__sizes app-txt">
+                                    <span>Adult Size ($139.99)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-row  belt-head__row --type-2">
+                            <div class="column">
+                                <div class="spin">
+                                    <button class="spin__button spin__button-plus icon-spin"></button>
+                                    <button class="spin__button spin__button-minus icon-spin" disabled></button>
+                                    <input type="number" value="0" name="input-spin" class="spin__input" disabled="disabled">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="belt-head__sizes app-txt">
+                                    <span>Youth Size ($129.99)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="camp-head__bottom row m-row align-middle">
+                            <div class="column">
+                                <button type="button" class="btn btn-primary">ADD TO CART</button>
+                            </div>
+                            <div class="column">
+                                <a href="/" class="btn btn-share ">
+                                    <i class="icon-share"></i>Share
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+
 
 
         </div>
     </section>
+
+
 
 
 
@@ -915,6 +995,15 @@
 <script src="js/libs/flickity.pkgd.min.js"></script>
 <script src="js/front.js"></script>
 <script type="text/javascript">
+    front.newSlider('.belt-head__carousel', {prevNextButtons: false, autoPlay: false});
+    front.newSlider('.belt-head__navcarousel', {
+        asNavFor: '.belt-head__carousel',
+        contain: false,
+        autoPlay: false,
+        pageDots: false,
+        wrapAround: true,
+        prevNextButtons: true,
+    });
     front.newSlider('.app-testimonials__carousel');
 </script>
 </body>

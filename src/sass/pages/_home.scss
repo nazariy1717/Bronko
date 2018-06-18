@@ -54,8 +54,28 @@
       font-weight: bold;
     }
   }
-  &__{}
-  &__{}
+
+  .flickity-prev-next-button{
+    color: rgba(255,255,255,0.5);
+    font-size: 50px;
+    @media (max-width: $breakpoint-sm) {
+      font-size: 30px;
+    }
+  }
+  .flickity-prev-next-button.previous {
+    left: 30px;
+    @media (max-width: $breakpoint-md) {
+      left: 15px;
+    }
+  }
+  .flickity-prev-next-button.next {
+    right: 30px;
+    @media (max-width: $breakpoint-md) {
+      right: 15px;
+    }
+  }
+
+
 }
 
 

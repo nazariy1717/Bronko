@@ -184,18 +184,20 @@
     @media (max-width: $breakpoint-md) {
       padding: 0 30px;
     }
+    .flickity-prev-next-button{
+      color: #d4d4d4;;
+      @media (max-width: $breakpoint-sm) {
+        font-size: 30px;
+      }
+    }
     .flickity-prev-next-button.previous {
       left: 0;
-      background: url(../img/carousel/slider-arr-prev-grey.png) center no-repeat;
-      background-size: contain;
       @media (max-width: $breakpoint-md) {
         left: -10px;
       }
     }
     .flickity-prev-next-button.next {
       right: 0;
-      background: url(../img/carousel/slider-arr-next-grey.png) center no-repeat;
-      background-size: contain;
       @media (max-width: $breakpoint-md) {
         right: -10px;
       }

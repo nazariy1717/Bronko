@@ -116,7 +116,7 @@ let front = {
             let $input = $(this).parent().find('input');
             let inputValue = $(this).parent().find('input').val();
             inputValue++;
-            if(inputValue > 1){
+            if(inputValue > 0){
                 $(this).parent().find('.spin__button-minus').removeAttr('disabled');
             }
             $input.val(inputValue);
@@ -126,7 +126,7 @@ let front = {
         $(document).on('click', '.spin__button-minus', function () {
             let $input = $(this).parent().find('input');
             let inputValue = $(this).parent().find('input').val();
-            if(inputValue == 1){
+            if(inputValue == 0){
                 $(this).attr('disabled')
             } else {
                 inputValue--;

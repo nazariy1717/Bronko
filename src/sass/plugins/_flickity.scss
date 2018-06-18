@@ -47,7 +47,10 @@
   height: 50px;
   cursor: pointer;
   border: 0;
+  font-size: 45px;
+  color: var(--col-black);
   outline: none;
+  background-color: transparent;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   transition: all 0.3s ease;
@@ -61,22 +64,19 @@
 }
 
 .flickity-prev-next-button.previous {
-  left: 20px;
-  background: url(../img/carousel/slider-arr-prev.png) center no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-  @media (max-width: $breakpoint-sm){
-    left: 0;
+  left: 0;
+  &:after{
+    content: "\e911";
+    font-family: 'icomoon' !important;
   }
 }
 
+
 .flickity-prev-next-button.next {
-  right: 20px;
-  background: url(../img/carousel/slider-arr-next.png) center no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-  @media (max-width: $breakpoint-sm){
-    right: 0;
+  right: 0;
+  &:after{
+    content: "\e912";
+    font-family: 'icomoon' !important;
   }
 }
 

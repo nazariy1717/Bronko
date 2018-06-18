@@ -37,3 +37,28 @@
   }
 }
 
+.btn-share{
+  width: 170px;
+  padding: 0;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: solid 1px #d4d4d4;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+  font-family: 'Myriad Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--col-black);
+  @include transition;
+  i{
+    position: relative;
+    margin-right: 10px;
+    top: 2px;
+  }
+  &:hover{
+    box-shadow: 0 0 13px rgba(78, 78, 78, 0.2);
+  }
+}
+
