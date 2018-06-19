@@ -74,6 +74,9 @@
   font-weight: bold;
   line-height: normal;
   color: var(--col-primary);
+  &.--grey{
+    color: #a0a0a0;
+  }
   &:after{
     content: "\e915";
     font-family: 'icomoon' !important;

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <title>Register an Account 2</title>
+    <title>Dashboard Add player</title>
     <meta name="description" content="">
     <link href="css/build.css" rel="stylesheet">
 </head>
@@ -402,7 +402,10 @@
                             <a href="/" class="breadcrumbs__link">HOME</a>
                         </li>
                         <li class="breadcrumbs__item">
-                            <a href="/" class="breadcrumbs__link active">Register an Account</a>
+                            <a href="/" class="breadcrumbs__link">My Players</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="/" class="breadcrumbs__link active">Add player</a>
                         </li>
                     </ul>
                 </div>
@@ -410,155 +413,110 @@
         </div>
     </section>
 
-    <section class="section registration">
+    <section class="section">
         <div class="container">
 
             <div class="dashboard__title-block text-center">
-                <h1 class="dashboard__title"><span>Register an</span> Account</h1>
-                <p class="dashboard__subtitle">Create a Bronko account to access the Bronko Skills Center Platform, sign up for Upcoming Camps or to quickly and conveniently order products and review your order history.</p>
+                <h1 class="dashboard__title"><span>Add</span> Player</h1>
             </div>
 
-            <form action="/" id="registration_step_2">
-                <span class="app-title-sm">Contact Info</span>
-
-                <div class="row m-row mb-40">
-                    <div class="column col-md-6 col-sm-6 col-xs-12">
+            <form action="/" id="add_player_form">
+                <div class="row m-row">
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="form__group-20">
-                            <label for="first_name" class="form__label">
-                                First Name
-                                <i class="form__label-required">*</i>
-                            </label>
+                            <label for="first_name" class="form__label">First Name<i class="form__label-required">*</i></label>
                             <input type="text" class="form__input" name="first_name" id="first_name" placeholder="John">
                         </div>
                     </div>
-                    <div class="column col-md-6 col-sm-6 col-xs-12">
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="form__group-20">
-                            <label for="last_name" class="form__label">
-                                Last Name
-                                <i class="form__label-required">*</i>
-                            </label>
+                            <label for="last_name" class="form__label">Last Name<i class="form__label-required">*</i></label>
                             <input type="text" class="form__input" name="last_name" id="last_name" placeholder="Doe">
                         </div>
                     </div>
-                    <div class="column col-md-6 col-sm-6 col-xs-12">
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="form__group-20">
-                            <label for="email" class="form__label">
-                                Email
-                                <i class="form__label-required">*</i>
-                            </label>
-                            <input type="email" class="form__input" name="email" id="email" placeholder="johndoe@me.com">
-                        </div>
-                    </div>
-                    <div class="column col-md-6 col-sm-6 col-xs-12">
-                        <div class="form__group-20">
-                            <label for="phone" class="form__label">
-                                Phone Number
-                                <i class="form__label-required">*</i>
-                            </label>
-                            <input type="text" class="form__input" name="phone" id="phone" placeholder="647-913-7650">
+                            <label for="birth" class="form__label">Birth Date<i class="form__label-required">*</i></label>
+                            <input type="text" class="form__input" name="birth" id="birth" placeholder="1997-10-01">
                         </div>
                     </div>
                     <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="form__group-20">
-                            <label for="company" class="form__label">Company</label>
-                            <input type="text" class="form__input" name="company" id="company" placeholder="Company Name">
+                            <label for="current_team" class="form__label">Current Team<i class="form__label-required">*</i></label>
+                            <input type="text" class="form__input" name="current_team" id="current_team" placeholder="Brooks Bandits">
                         </div>
                     </div>
                     <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="form__group-20">
-                            <label for="address" class="form__label">
-                                Address
-                                <i class="form__label-required">*</i>
-                            </label>
-                            <input type="text" class="form__input" name="address" id="address" placeholder="9100 Yonge St.">
+                            <label for="previous_team" class="form__label">Previous Team<i class="form__label-required">*</i></label>
+                            <input type="text" class="form__input" name="previous_team" id="previous_team" placeholder="Okotoks Oilers">
                         </div>
                     </div>
                     <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="form__group-20">
-                            <label for="city" class="form__label">
-                                City
-                                <i class="form__label-required">*</i>
-                            </label>
-                            <input type="text" class="form__input" name="city" id="city" placeholder="Toronto">
-                        </div>
-                    </div>
-                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <div class="form__group-20">
-                            <label for="postal_code" class="form__label">
-                                Postal Code
-                                <i class="form__label-required">*</i>
-                            </label>
-                            <input type="text" class="form__input" name="postal_code" id="postal_code" placeholder="N2J 0Y6">
-                        </div>
-                    </div>
-                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <div class="form__group-20">
-                            <label for="country" class="form__label">
-                                Country
-                                <i class="form__label-required">*</i>
-                            </label>
-                            <select name="country" id="country" class="form__select">
-                                <option value="0">Canada</option>
-                                <option value="1">Canada</option>
+                            <label for="level" class="form__label">Level<i class="form__label-required">*</i></label>
+                            <select name="level" id="level" class="form__select">
+                                <option value="0">Junior/College</option>
+                                <option value="1">Middle/College</option>
                             </select>
                         </div>
                     </div>
-                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="column col-md-6 col-sm-6 col-xs-12">
                         <div class="form__group-20">
-                            <label for="state" class="form__label">
-                                Province/State
-                                <i class="form__label-required">*</i>
-                            </label>
-                            <select name="state" id="state" class="form__select">
-                                <option value="0">Ontario</option>
-                                <option value="1">Ontario</option>
+                            <label for="position" class="form__label">Position<i class="form__label-required">*</i></label>
+                            <select name="position" id="position" class="form__select">
+                                <option value="0">Goalie</option>
+                                <option value="1">Goalie</option>
                             </select>
                         </div>
                     </div>
-                </div>
-
-                <span class="app-title-sm">CREATE PASSWORD</span>
-
-                <div class="row m-row">
                     <div class="column col-md-6 col-sm-6 col-xs-12">
                         <div class="form__group-20">
-                            <label for="password" class="form__label">
-                                Password
-                                <i class="form__label-required">*</i>
-                            </label>
-                            <input type="password" class="form__input" name="password" id="password" placeholder="• • • • • • • • • •">
+                            <label for="shoots" class="form__label">Shoots<i class="form__label-required">*</i></label>
+                            <select name="shoots" id="shoots" class="form__select">
+                                <option value="0">Right</option>
+                                <option value="1">Left</option>
+                            </select>
                         </div>
                     </div>
                     <div class="column col-md-6 col-sm-6 col-xs-12">
                         <div class="form__group-20">
-                            <label for="last_name" class="form__label">
-                                Confirm Password
-                                <i class="form__label-required">*</i>
-                            </label>
-                            <input type="password" class="form__input" name="password_confirm" id="password_confirm" placeholder="• • • • • • • • • •">
+                            <label for="jersey" class="form__label">Jersey<i class="form__label-required">*</i></label>
+                            <select name="jersey" id="jersey" class="form__select">
+                                <option value="0">Youth M</option>
+                                <option value="1">Youth M</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="player_account" class="form__label">Account Holder’s Relationship to Player<i class="form__label-required">*</i></label>
+                            <input type="text" class="form__input" name="player_account" id="player_account" placeholder="Cousin">
+                        </div>
+                    </div>
+                    <div class="column col-xs-12">
+                        <div class="form__group-20">
+                            <label for="medical_conditions" class="form__label">Medical Conditions<i class="form__label-required">*</i></label>
+                            <textarea name="medical_conditions" id="medical_conditions" class="form__area"></textarea>
                         </div>
                     </div>
                     <div class="column col-xs-12">
                         <div class="form__group-30">
-                            <div class="checkbox">
-                                <input type="checkbox" id="agree" name="agree">
-                                <label for="agree">I have read and agree to the <a href="/" class="app-link">Terms and Conditions.</a></label>
-                            </div>
+                            <label for="medical_conditions" class="form__label">Notes</label>
+                            <textarea name="Notes" id="Notes" class="form__area"></textarea>
                         </div>
                     </div>
                 </div>
-
                 <div class="row m-row align-center">
                     <div class="column">
                         <a href="/" class="btn btn-primary --black mb-10">CANCEL</a>
                     </div>
                     <div class="column">
-                        <button type="submit" class="btn btn-primary mb-10">CREATE ACCOUNT</button>
+                        <button type="submit" class="btn btn-primary mb-10">ADD PLAYER</button>
                     </div>
                 </div>
 
             </form>
-
         </div>
     </section>
 
@@ -661,7 +619,7 @@
 <script src="js/libs/jquery.validate.js"></script>
 <script src="js/libs/jquery.mask.min.js"></script>
 <script type="text/javascript">
-    $('#phone').mask('000-000-0000');
+    $('#birth').mask('0000-00-00');
 </script>
 <script type="text/javascript">
     jQuery.validator.addMethod("fullEmail", function (value, element) {
@@ -669,7 +627,7 @@
     }, 'Enter the correct email address.');
 </script>
 <script type="text/javascript">
-    $('#registration_step_2').validate({
+    $('#add_player_form').validate({
         errorClass: "error-valid",
         errorElement: "span",
         errorPlacement: function (error, element) {
@@ -685,46 +643,40 @@
                 required: true,
                 minlength: 2
             },
-            email: {
+            birth: {
                 required: true,
-                fullEmail: true,
-                minlength: 2,
+                minlength: 10,
+                maxlength: 10
             },
-            phone: {
-                required: true,
-                minlength: 12,
-                maxlength: 12
-            },
-            address: {
+            current_team: {
                 required: true,
                 minlength: 2
             },
-            city: {
+            previous_team: {
                 required: true,
                 minlength: 2
             },
-            postal_code: {
+            level: {
+                required: true
+            },
+            position: {
+                required: true
+            },
+            shoots: {
+                required: true
+            },
+            jersey: {
+                required: true
+            },
+            player_account: {
                 required: true,
                 minlength: 2
             },
-            country: {
-                required: true
-            },
-            state: {
-                required: true
-            },
-            password: {
+            medical_conditions: {
                 required: true,
-                minlength: 6
+                minlength: 20
             },
-            password_confirm: {
-                required: true,
-                minlength: 6,
-                equalTo: password
-            },
-            agree: {
-                required: true
-            },
+
 
         },
         submitHandler: function (form) {
