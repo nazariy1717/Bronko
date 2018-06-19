@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <title>Dashboard My Players</title>
+    <title>Dashboard Edit Address</title>
     <meta name="description" content="">
     <link href="css/build.css" rel="stylesheet">
 </head>
@@ -393,12 +393,24 @@
         </div>
     </header>
 
-    <section class="dashboard-head display-table" style="background-image: url(img/background/dashoard-my-players.png);">
-        <div class="dashboard-head__overlay"></div>
+    <section class="app-head-sm display-table">
         <div class="display-table__cell">
             <div class="container">
-                <div class="dashboard-head__content">
-                    <h1 class="dashboard-head__title">My Players</h1>
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="/" class="breadcrumbs__link">HOME</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="/" class="breadcrumbs__link">My Account</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="/" class="breadcrumbs__link">Address Book</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="/" class="breadcrumbs__link active">Edit Address</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -406,75 +418,102 @@
 
     <section class="section">
         <div class="container">
-            <div class="row m-row">
 
-                <div class="col-lg-3 col-xs-12 column">
-                    <div class="dashboard-user">
-                        <div class="dashboard-user__content">
-                            <div class="dashboard-user__image" style="background-image: url(img/icon-user.png);"></div>
-                            <span class="dashboard-user__name">John Doe</span>
-                            <ul class="dashboard-user__list">
-                                <li class="dashboard-user__list-item">
-                                    <a href="/" class="dashboard-user__list-link">Dashboard</a>
-                                </li>
-                                <li class="dashboard-user__list-item">
-                                    <a href="/" class="dashboard-user__list-link">My Bronko Content</a>
-                                </li>
-                                <li class="dashboard-user__list-item">
-                                    <a href="/" class="dashboard-user__list-link">My Account</a>
-                                </li>
-                                <li class="dashboard-user__list-item">
-                                    <a href="/" class="dashboard-user__list-link">My Orders</a>
-                                </li>
-                                <li class="dashboard-user__list-item">
-                                    <a href="/" class="dashboard-user__list-link active">My Players</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-9 col-xs-12 column">
-                    <div class="dashboard__title-block">
-                        <h1 class="dashboard__title"><span>All</span> Players</h1>
-                    </div>
-
-                    <div class="players-table">
-                        <div class="players-table__row">
-                            <a href="#" class="players-table__remove icon-remove"></a>
-                            <span class="players-table__name app-txt">Ben Smith</span>
-                            <a href="/" class="players-table__btn btn-link">Edit</a>
-                        </div>
-                        <div class="players-table__row">
-                            <a href="#" class="players-table__remove icon-remove"></a>
-                            <span class="players-table__name app-txt">John Doe</span>
-                            <a href="/" class="players-table__btn btn-link">Edit</a>
-                        </div>
-                        <div class="players-table__row">
-                            <a href="#" class="players-table__remove icon-remove"></a>
-                            <span class="players-table__name app-txt">Sam Cook</span>
-                            <a href="/" class="players-table__btn btn-link">Edit</a>
-                        </div>
-                        <div class="players-table__row">
-                            <a href="#" class="players-table__remove icon-remove"></a>
-                            <span class="players-table__name app-txt">Bill Davidson</span>
-                            <a href="/" class="players-table__btn btn-link">Edit</a>
-                        </div>
-                    </div>
-                    
-                    <div class="row m-row align-middle align-justify">
-                        <div class="column">
-                            <p class="players-table__txt">Choose a Camp to sign my players up for</p>
-                        </div>
-                        <div class="column">
-                            <a href="/" class="btn btn-primary">ADD NEW PLAYER</a>
-                        </div>
-                    </div>
-                    
-                </div>
-
-
+            <div class="dashboard__title-block text-center">
+                <h1 class="dashboard__title"><span>Edit</span> Address</h1>
             </div>
+
+            <form action="/" id="edit_address_form">
+                <div class="row m-row mb-30">
+
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="first_name" class="form__label">First Name<i class="form__label-required">*</i></label>
+                            <input type="text" class="form__input" name="first_name" id="first_name" value="John">
+                        </div>
+                    </div>
+
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="last_name" class="form__label">Last Name<i class="form__label-required">*</i></label>
+                            <input type="text" class="form__input" name="last_name" id="last_name" value="Doe">
+                        </div>
+                    </div>
+
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="company" class="form__label">Company</label>
+                            <input type="text" class="form__input" name="company" id="company">
+                        </div>
+                    </div>
+
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="address_1" class="form__label">Address 1<i class="form__label-required">*</i></label>
+                            <input type="text" class="form__input" name="address_1" id="address_1" value="7200 Steeles Ave. W">
+                        </div>
+                    </div>
+
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="address_2" class="form__label">Address 2</label>
+                            <input type="text" class="form__input" name="address_2" id="address_2">
+                        </div>
+                    </div>
+
+                    <div class="column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="city" class="form__label">City<i class="form__label-required">*</i></label>
+                            <input type="text" class="form__input" name="city" id="city" value="Toronto">
+                        </div>
+                    </div>
+
+                    <div class="column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="postal_code" class="form__label">Postal Code<i class="form__label-required">*</i></label>
+                            <input type="text" class="form__input" name="postal_code" id="postal_code" value="M6Y 9T4">
+                        </div>
+                    </div>
+
+                    <div class="column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="country" class="form__label">Country<i class="form__label-required">*</i></label>
+                            <select name="country" id="country" class="form__select">
+                                <option value="0">Canada</option>
+                                <option value="1">Canada</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="state" class="form__label">Province / State<i class="form__label-required">*</i></label>
+                            <select name="state" id="state" class="form__select">
+                                <option value="0">Ontario</option>
+                                <option value="1">Ontario</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form__group-20">
+                            <label for="default_address" class="form__label">Default Address<i class="form__label-required">*</i></label>
+                            <select name="default_address" id="default_address" class="form__select">
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row m-row align-center">
+                    <div class="column">
+                        <a href="/" class="btn btn-primary --black mb-10">CANCEL</a>
+                    </div>
+                    <div class="column">
+                        <button type="submit" class="btn btn-primary mb-10">SAVE ADDRESS</button>
+                    </div>
+                </div>
+
+            </form>
         </div>
     </section>
 
@@ -574,6 +613,50 @@
 
 <script src="js/libs/jquery-3.2.1.min.js"></script>
 <script src="js/front.js"></script>
-
+<script src="js/libs/jquery.validate.js"></script>
+<script type="text/javascript">
+    $('#edit_address_form').validate({
+        errorClass: "error-valid",
+        errorElement: "span",
+        errorPlacement: function (error, element) {
+            console.log(element);
+            $(element).parent().append(error);
+        },
+        rules: {
+            first_name: {
+                required: true,
+                minlength: 2
+            },
+            last_name: {
+                required: true,
+                minlength: 2
+            },
+            address_1: {
+                required: true,
+                minlength: 5
+            },
+            city: {
+                required: true,
+                minlength: 2
+            },
+            postal_code: {
+                required: true,
+                minlength: 6
+            },
+            country: {
+                required: true
+            },
+            state: {
+                required: true
+            },
+            default_address: {
+                required: true
+            },
+        },
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
+</script>
 </body>
 </html>

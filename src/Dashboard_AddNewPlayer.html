@@ -622,11 +622,6 @@
     $('#birth').mask('0000-00-00');
 </script>
 <script type="text/javascript">
-    jQuery.validator.addMethod("fullEmail", function (value, element) {
-        return this.optional(element) || /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value);
-    }, 'Enter the correct email address.');
-</script>
-<script type="text/javascript">
     $('#add_player_form').validate({
         errorClass: "error-valid",
         errorElement: "span",
