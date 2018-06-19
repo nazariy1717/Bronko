@@ -9,7 +9,6 @@
   }
   &__title{
     display: block;
-    text-align: center;
     font-family: 'Myriad Pro', sans-serif;
     font-size: 60px;
     text-transform: uppercase;
@@ -29,7 +28,6 @@
   }
   &__subtitle{
     display: block;
-    text-align: center;
     font-family: 'Myriad Pro', sans-serif;
     font-size: 16px;
     font-weight: normal;
@@ -37,7 +35,6 @@
     color: var(--col-grey);
   }
 }
-
 
 .registration{
   &__wrap{
@@ -50,3 +47,189 @@
     text-align: left;
   }
 }
+
+
+
+.dashboard-head{
+  position: relative;
+  margin-top: 135px;
+  height: 275px;
+  background: center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  @media (max-width: $breakpoint-sm){
+    height: 200px;
+  }
+  &__overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+  }
+  &__content{
+    position: relative;
+    z-index: 3;
+  }
+  &__title{
+    display: block;
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: normal;
+    color: #fff;
+    @media (max-width: $breakpoint-md){
+      font-size: 45px;
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 36px;
+    }
+  }
+}
+
+
+
+
+.dashboard-user{
+  @media (max-width: $breakpoint-lg){
+    margin-bottom: 30px;
+  }
+  @media (max-width: $breakpoint-sm){
+    max-width: 270px;
+  }
+  &__content{
+    padding: 15px;
+    background-color: #fff;
+    border: solid 1px #d4d4d4;
+    @media (max-width: $breakpoint-lg){
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+    }
+  }
+  &__image{
+    height: 240px;
+    background: center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    margin-bottom: 10px;
+    @media (max-width: $breakpoint-lg){
+     @include grid-size(33.333%);
+    }
+    @media (max-width: $breakpoint-sm){
+      @include grid-size(100%);
+    }
+  }
+  &__name{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    color: var(--col-black);
+    margin-bottom: 10px;
+    @media (max-width: $breakpoint-lg){
+      @include grid-size(33.333%);
+    }
+    @media (max-width: $breakpoint-sm){
+      @include grid-size(100%);
+    }
+  }
+  &__list{
+    @media (max-width: $breakpoint-lg){
+      @include grid-size(33.333%);
+    }
+    @media (max-width: $breakpoint-sm){
+      @include grid-size(100%);
+    }
+    &-item{
+      display: block;
+
+    }
+    &-link{
+      display: block;
+      padding: 14px 0;
+      text-align: center;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: normal;
+      color: var(--col-grey);
+      border-bottom: 1px solid #d8d8d8;
+      @include transition;
+      &:hover{
+        color: #fff;
+        background-color: var(--col-black);
+      }
+      &.active{
+        color: #fff;
+        background-color: var(--col-black);
+      }
+    }
+
+  }
+}
+
+
+
+
+.players-table{
+  padding: 10px 15px;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 40px;
+  &__row{
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1px solid #d4d4d4;
+    &:nth-last-child(1){
+      border-bottom: 0;
+    }
+  }
+  &__name{
+    position: relative;
+    padding-left: 40px;
+    padding-right: 70px;
+  }
+  &__remove{
+    position: absolute;
+    left: 15px;
+    top: 11px;
+    cursor: pointer;
+    z-index: 9;
+    font-size: 15px;
+    color: var(--col-primary);
+  }
+  &__btn{
+    position: absolute;
+    right: 15px;
+    top: 12px;
+  }
+  &__txt{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.39;
+    color: var(--col-primary);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

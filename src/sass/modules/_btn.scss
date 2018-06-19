@@ -65,3 +65,28 @@
   }
 }
 
+.btn-link{
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: normal;
+  color: var(--col-primary);
+  &:after{
+    content: "\e915";
+    font-family: 'icomoon' !important;
+    position: absolute;
+    top: 1px;
+    right: 0;
+    font-size: 14px;
+    color: var(--col-primary);
+    transition: all 0.25s ease;
+  }
+  &:hover{
+    &:after{
+      transform: translateX(5px);
+    }
+  }
+}
