@@ -76,6 +76,9 @@
   color: var(--col-primary);
   &.--grey{
     color: #a0a0a0;
+    &:after{
+      color: #a0a0a0;
+    }
   }
   &:after{
     content: "\e915";
