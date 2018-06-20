@@ -5,12 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <title>Dashboard My Orders</title>
+    <title>Dashboard My Account</title>
     <meta name="description" content="">
     <link href="css/build.css" rel="stylesheet">
 </head>
 <body>
-
 
 <div class="page">
 
@@ -393,17 +392,16 @@
         </div>
     </header>
 
-    <section class="dashboard-head display-table" style="background-image: url(img/background/dashboard-my-orders.png);">
+    <section class="dashboard-head display-table" style="background-image: url(img/background/dashboard-my-account.png);">
         <div class="dashboard-head__overlay"></div>
         <div class="display-table__cell">
             <div class="container">
                 <div class="dashboard-head__content">
-                    <h1 class="dashboard-head__title">My Orders</h1>
+                    <h1 class="dashboard-head__title">My Account</h1>
                 </div>
             </div>
         </div>
     </section>
-
 
     <section class="section">
         <div class="container">
@@ -422,13 +420,13 @@
                                     <a href="/" class="dashboard-user__list-link">My Bronko Content</a>
                                 </li>
                                 <li class="dashboard-user__list-item">
-                                    <a href="/" class="dashboard-user__list-link">My Account</a>
+                                    <a href="/" class="dashboard-user__list-link active">My Account</a>
                                 </li>
                                 <li class="dashboard-user__list-item">
                                     <a href="/" class="dashboard-user__list-link">My Orders</a>
                                 </li>
                                 <li class="dashboard-user__list-item">
-                                    <a href="/" class="dashboard-user__list-link active">My Players</a>
+                                    <a href="/" class="dashboard-user__list-link ">My Players</a>
                                 </li>
                             </ul>
                         </div>
@@ -437,128 +435,243 @@
 
                 <div class="col-lg-9 col-xs-12 column">
                     <div class="dashboard__title-block">
-                        <h2 class="dashboard__title"><span>Order</span> History</h2>
+                        <h2 class="dashboard__title"><span>Personal</span> Info</h2>
                     </div>
 
-                    <div class="history-table">
-                        <div class="history-table__row --head row m-row">
-                            <div class="column">
-                                <span>Date</span>
+                    <div class="personal-info">
+                        <div class="row m-row">
+                            <div class="column  personal-info__column-1 ">
+                                <div class="personal-info__img-wrap">
+                                    <img src="img/icon-user.png" class="image">
+                                    <div class="personal-info__upload">
+                                        <div class="personal-info__upload-form">
+                                            <input type="file" name="image_upload" id="image_upload" class="hidden">
+                                            <label for="image_upload">Edit Picture</label>
+                                        </div>
+                                        <a href="#" class="personal-info__remove icon-remove"></a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="column">
-                                <span>Order#</span>
-                            </div>
-                            <div class="column">
-                                <span>Product</span>
-                            </div>
-                            <div class="column">
-                                <span>QTY</span>
-                            </div>
-                            <div class="column">
-                                <span>Order Total</span>
+                            <div class="column  personal-info__column-2">
+                                <form action="/" id="personal_data_form">
+                                    <div class="row m-row mb-20">
+                                        <div class="column col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form__group-20">
+                                                <label for="first_name" class="form__label">
+                                                    First Name
+                                                    <i class="form__label-required">*</i>
+                                                </label>
+                                                <input type="text" class="form__input" name="first_name" id="first_name" value="John">
+                                            </div>
+                                        </div>
+                                        <div class="column col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form__group-20">
+                                                <label for="last_name" class="form__label">
+                                                    Last Name
+                                                    <i class="form__label-required">*</i>
+                                                </label>
+                                                <input type="text" class="form__input" name="last_name" id="last_name" value="Doe">
+                                            </div>
+                                        </div>
+                                        <div class="column col-xs-12">
+                                            <div class="form__group-20">
+                                                <label for="company" class="form__label">Company</label>
+                                                <input type="text" class="form__input" name="company" id="company" placeholder="Company Name">
+                                            </div>
+                                        </div>
+                                        <div class="column col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form__group-20">
+                                                <label for="phone" class="form__label">
+                                                    Phone Number
+                                                    <i class="form__label-required">*</i>
+                                                </label>
+                                                <input type="text" class="form__input" name="phone" id="phone" value="647-913-7650">
+                                            </div>
+                                        </div>
+                                        <div class="column col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form__group-20">
+                                                <label for="email" class="form__label">
+                                                    Email
+                                                    <i class="form__label-required">*</i>
+                                                </label>
+                                                <input type="email" class="form__input" name="email" id="email" value="johndoe@me.com">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-row">
+                                        <div class="column">
+                                            <button type="reset" class="btn btn-primary --black mb-15">CANCEL</button>
+                                        </div>
+                                        <div class="column">
+                                            <button type="submit" class="btn btn-primary mb-15">UPDATE</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <div class="history-table__row --body row m-row">
-                            <div class="column" data-head="Date">
-                                <span>April 12, 2018</span>
-                            </div>
-                            <div class="column" data-head="Date">
-                                <span>549027</span>
-                            </div>
-                            <div class="column" data-head="Order#">
-                                <span>Bronko Belt RTI Adult Size</span>
-                            </div>
-                            <div class="column" data-head="QTY">
-                                <span>9</span>
-                            </div>
-                            <div class="column" data-head="Order Total">
-                                <span>$1,259.91</span>
+                    </div>
+
+
+
+                    <div class="dashboard__title-block">
+                        <h2 class="dashboard__title"><span>Address</span> Book</h2>
+                    </div>
+                    <div class="address-table">
+                        <div class="address-table__content">
+                            <div class="players-table__row">
+                                <a href="#" class="address-table__remove icon-remove"></a>
+                                <p class="address-table__name app-txt">
+                                    <span>John Doe</span>
+                                    <span>7200 Steeles Ave. W</span>
+                                    <span>Toronto M3J 7T5</span>
+                                    <span>Ontario</span>
+                                    <span>Canada</span>
+                                </p>
+                                <a href="/" class="address-table__btn btn-link">Edit</a>
                             </div>
                         </div>
-                        <div class="history-table__row --body row m-row">
-                            <div class="column" data-head="Date">
-                                <span>April 12, 2018</span>
-                            </div>
-                            <div class="column" data-head="Date">
-                                <span>549027</span>
-                            </div>
-                            <div class="column" data-head="Order #">
-                                <span>Bronko Belt RTI Adult Size</span>
-                            </div>
-                            <div class="column" data-head="QTY">
-                                <span>9</span>
-                            </div>
-                            <div class="column" data-head="Order Total">
-                                <span>$1,259.91</span>
-                            </div>
+                        <div class="address-table__bottom">
+                            <a href="/" class="btn btn-primary btn-right">ADD NEW ADDRESS</a>
                         </div>
                     </div>
 
 
                     <div class="dashboard__title-block">
-                        <h2 class="dashboard__title"><span>Subscription</span> Status</h2>
+                        <h2 class="dashboard__title"><span>Change</span> Password</h2>
+                        <form action="/" id="change_password_form">
+                            <div class="row m-row mb-20">
+                                <div class="column col-md-4 col-xs-12">
+                                    <div class="form__group-20">
+                                        <label for="current_password" class="form__label">Current Password<i class="form__label-required">*</i></label>
+                                        <input type="password" name="current_password" id="current_password" class="form__input">
+                                    </div>
+                                </div>
+                                <div class="column col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form__group-20">
+                                        <label for="new_password" class="form__label">New Password<i class="form__label-required">*</i></label>
+                                        <input type="password" name="new_password" id="new_password" class="form__input">
+                                    </div>
+                                </div>
+                                <div class="column col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form__group-20">
+                                        <label for="repeat_new_password" class="form__label">Repeat New Password<i class="form__label-required">*</i></label>
+                                        <input type="password" name="repeat_new_password" id="repeat_new_password" class="form__input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-row align-right mb-75">
+                                <div class="column">
+                                    <button type="reset" class="btn btn-primary --black mb-15">CANCEL</button>
+                                </div>
+                                <div class="column">
+                                    <button type="submit" class="btn btn-primary mb-15">UPDATE</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
 
-                    <div class="subscription-table">
-                        <div class="subscription-table__row --head row m-row">
+
+                    <div class="dashboard__title-block">
+                        <h2 class="dashboard__title"><span>Account</span> Credits</h2>
+                        <p class="dashboard__subtitle">Your current balance is: <strong>$0.00.</strong></p>
+                    </div>
+
+                    <div class="credits-table">
+                        <div class="credits-table__row --head row m-row">
                             <div class="column">
-                                <span>Date</span>
+                                <span>Date Added</span>
                             </div>
                             <div class="column">
-                                <span>Name</span>
+                                <span>Description</span>
                             </div>
                             <div class="column">
-                                <span>Subscription Period</span>
-                            </div>
-                            <div class="column">
-                                <span>Status</span>
-                            </div>
-                            <div class="column"></div>
-                        </div>
-                        <div class="subscription-table__row --body row m-row">
-                            <div class="column" data-head="Date">
-                                <span>April 12, 2018</span>
-                            </div>
-                            <div class="column" data-head="Name">
-                                <span>Skills Center Starter Pack</span>
-                            </div>
-                            <div class="column" data-head="Subscription Period">
-                                <span>1 year</span>
-                            </div>
-                            <div class="column" data-head="Status">
-                                <span class="subscription-table__status active">Active</span>
-                            </div>
-                            <div class="column" data-head="Order Total">
-                                <a href="/" class="btn-link --grey">Renew</a>
+                                <span>Amount</span>
                             </div>
                         </div>
-                        <div class="subscription-table__row --body row m-row">
-                            <div class="column" data-head="Date">
-                                <span>April 12, 2018</span>
+                        <div class="credits-table__row --body row m-row">
+                            <div class="column" data-head="Date Added">
+                                <span>February 10, 2018</span>
                             </div>
-                            <div class="column" data-head="Name">
-                                <span>Skills Center Starter Pack</span>
+                            <div class="column" data-head="Description">
+                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                             </div>
-                            <div class="column" data-head="Subscription Period">
-                                <span>1 year</span>
-                            </div>
-                            <div class="column" data-head="Status">
-                                <span class="subscription-table__status expired">Expired</span>
-                            </div>
-                            <div class="column" data-head="Order Total">
-                                <a href="/" class="btn-link ">Renew</a>
+                            <div class="column" data-head="column">
+                                <span>$50.00</span>
                             </div>
                         </div>
                     </div>
+
+                    <div class="dashboard__title-block">
+                        <h2 class="dashboard__title"><span>Gift</span> Certificates</h2>
+                        <p class="dashboard__subtitle mb-50">This gift certificate will be emailed to the recipient after your order has been paid for.</p>
+                    </div>
+
+                    <form action="/" id="dashboard_gift">
+                            <div class="row m-row">
+                                <div class="column col-md-6">
+                                    <div class="form__group-20">
+                                        <label for="recipient_name" class="form__label">Recipient’s Name<i class="form__label-required">*</i></label>
+                                        <input type="text" name="recipient_name" id="recipient_name" class="form__input" placeholder="Ben Smith">
+                                    </div>
+                                </div>
+                                <div class="column col-md-6">
+                                    <div class="form__group-20">
+                                        <label for="recipient_email" class="form__label">Recipients Email<i class="form__label-required">*</i></label>
+                                        <input type="email" name="recipient_email" id="recipient_email" class="form__input" placeholder="bensmith@me.com">
+                                    </div>
+                                </div>
+                                <div class="column col-md-6">
+                                    <div class="form__group-20">
+                                        <label for="name" class="form__label">Your Name<i class="form__label-required">*</i></label>
+                                        <input type="text" name="name" id="name" class="form__input" value="John Doe">
+                                    </div>
+                                </div>
+                                <div class="column col-md-6">
+                                    <div class="form__group-20">
+                                        <label for="your_email" class="form__label">Your Email<i class="form__label-required">*</i></label>
+                                        <input type="email" name="email" id="your_email" class="form__input" value="johndoe@me.com">
+                                    </div>
+                                </div>
+                                <div class="column col-xs-12">
+                                    <div class="form__group-20">
+                                        <label for="message" class="form__label">Your Message</label>
+                                        <textarea name="message" id="message" class="form__area"></textarea>
+                                    </div>
+                                </div>
+                                <div class="column col-md-6">
+                                    <div class="form__group-20">
+                                        <label for="amount" class="form__label">Amount<i class="form__label-required">*</i></label>
+                                        <input type="text" name="amount" id="amount" class="form__input" placeholder="$0.00">
+                                     </div>
+                                </div>
+                                <div class="column col-md-6">
+                                    <div class="form__group-20">
+                                        <label for="gift_theme" class="form__label">Gift Certificate Theme<i class="form__label-required">*</i></label>
+                                        <select name="gift_theme" id="gift_theme" class="form__select">
+                                            <option value="0" selected disabled>Select Theme</option>
+                                            <option value="1">Theme 1</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="column col-xs-12">
+                                    <div class="form__group-30">
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="agree" name="agree">
+                                            <label for="agree">I understand that gift certificates are non-refundable.</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-right">CONTINUE</button>
+                        </form>
 
 
                 </div>
+
             </div>
         </div>
     </section>
-
-
-
 
     <footer class="footer">
         <div class="footer__overlay"></div>
@@ -653,9 +766,120 @@
 
 </div>
 
-
 <script src="js/libs/jquery-3.2.1.min.js"></script>
+<script src="js/libs/jquery.validate.js"></script>
 <script src="js/front.js"></script>
+<script type="text/javascript">
+    jQuery.validator.addMethod("fullEmail", function (value, element) {
+        return this.optional(element) || /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value);
+    }, 'Enter the correct email address.');
+</script>
+<script src="js/libs/jquery.mask.min.js"></script>
+<script type="text/javascript">
+    $('#phone').mask('000-000-0000');
+</script>
+<script type="text/javascript">
+    $('#personal_data_form').validate({
+        errorClass: "error-valid",
+        errorElement: "span",
+        errorPlacement: function (error, element) {
+            console.log(element);
+            $(element).parent().append(error);
+        },
+        rules: {
+            first_name: {
+                required: true,
+                minlength: 2
+            },
+            last_name: {
+                required: true,
+                minlength: 2
+            },
+            phone: {
+                required: true,
+                minlength: 12,
+                maxlength: 12
+            },
+            email: {
+                required: true,
+                fullEmail: true,
+                minlength: 2,
+            },
+        },
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
 
+    $('#change_password_form').validate({
+        errorClass: "error-valid",
+        errorElement: "span",
+        errorPlacement: function (error, element) {
+            console.log(element);
+            $(element).parent().append(error);
+        },
+        rules: {
+            current_password: {
+                required: true,
+                minlength: 6
+            },
+            new_password: {
+                required: true,
+                minlength: 6
+            },
+            repeat_new_password: {
+                required: true,
+                minlength: 6,
+                equalTo: 'new_password'
+            },
+        },
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
+
+
+    $('#dashboard_gift').validate({
+        errorClass: "error-valid",
+        errorElement: "span",
+        errorPlacement: function (error, element) {
+            console.log(element);
+            $(element).parent().append(error);
+        },
+        rules: {
+            recipient_name: {
+                required: true,
+                minlength: 2
+            },
+            recipient_email: {
+                required: true,
+                fullEmail: true,
+                minlength: 2,
+            },
+            name: {
+                required: true,
+                minlength: 2
+            },
+            email: {
+                required: true,
+                fullEmail: true,
+                minlength: 2,
+            },
+            amount: {
+                required: true,
+                number: true
+            },
+            gift_theme: {
+                required: true
+            },
+            agree: {
+                required: true
+            },
+        },
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
+</script>
 </body>
 </html>
