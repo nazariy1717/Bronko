@@ -18,6 +18,12 @@
 
 
 /*******/
+.icon-pagination-left:before {
+  content: "\e91a";
+}
+.icon-pagination-right:before {
+  content: "\e91b";
+}
 .icon-phone-letter:before {
   content: "\e919";
 }
