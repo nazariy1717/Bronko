@@ -90,9 +90,26 @@
     color: var(--col-primary);
     transition: all 0.25s ease;
   }
+
+
   &:hover{
     &:after{
       transform: translateX(5px);
+    }
+  }
+
+  &.--left{
+    padding-left: 20px;
+    padding-right: 0;
+    &:after{
+      left: 0;
+      right: initial;
+      transform: scale(-1);
+    }
+    &:hover{
+      &:after{
+        transform: translateX(-5px) scale(-1);
+      }
     }
   }
 }
