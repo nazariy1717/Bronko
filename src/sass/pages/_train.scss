@@ -19,6 +19,14 @@
     margin-bottom: 30px;
     backface-visibility: hidden;
     @include transition;
+    &.active{
+      img{
+        opacity: 0.6;
+      }
+      .our-instructors__name{
+        color: var(--col-grey);
+      }
+    }
     img{
       backface-visibility: hidden;
       @include transition;
@@ -48,6 +56,55 @@
     font-weight: normal;
     line-height: normal;
     color: var(--col-grey);
+  }
+
+}
+
+
+.instructor{
+  &__column{
+    margin-bottom: 30px;
+    .app-txt + .app-txt {
+      margin-top: 10px;
+    }
+  }
+  &__role{
+    display: block;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.25;
+    color: var(--col-black);
+    margin-bottom: 40px;
+  }
+  &__carousel{
+    width: 500px;
+    padding: 0 30px;
+    margin: auto;
+    @media (max-width: $breakpoint-md){
+      width: auto;
+      max-width: 500px;
+    }
+    @media (max-width: $breakpoint-sm){
+      padding: 0 15px;
+    }
+    .flickity-prev-next-button{
+      color: var(--col-d4);
+      @media (max-width: $breakpoint-sm){
+       font-size: 30px;
+      }
+    }
+    .flickity-prev-next-button.previous{
+      left: -10px;
+      @media (max-width: $breakpoint-sm){
+        left: -15px;
+      }
+    }
+    .flickity-prev-next-button.next{
+      right: 0;
+      @media (max-width: $breakpoint-sm){
+        right: -15px;
+      }
+    }
   }
   &__{}
 }
