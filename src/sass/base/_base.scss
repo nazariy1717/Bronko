@@ -76,6 +76,10 @@ strong{
 
 .text-block{
   margin-bottom: 25px;
+  &.--modifier{
+    margin-bottom: 0;
+
+  }
   .app-txt + .app-txt {
     margin-top: 10px;
   }
