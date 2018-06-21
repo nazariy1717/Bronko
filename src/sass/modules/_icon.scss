@@ -18,6 +18,15 @@
 
 
 /*******/
+.icon-private:before {
+  content: "\e916";
+}
+.icon-camps:before {
+  content: "\e917";
+}
+.icon-team-training:before {
+  content: "\e918";
+}
 .icon-remove:before {
   content: "\e914";
 }

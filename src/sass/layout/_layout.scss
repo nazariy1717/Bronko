@@ -417,6 +417,13 @@
     top: 12px;
     font-size: 30px;
     color: var(--col-black);
+    @media (max-width: $breakpoint-md){
+      top: 3px;
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 24px;
+      top: 6px;
+    }
   }
   &__toggle-icon{
     position: absolute;
@@ -450,11 +457,18 @@
     .app-txt + .app-txt {
       margin-top: 10px;
     }
-
     img{
       @media (max-width: $breakpoint-md) {
         margin-top: 30px;
       }
+    }
+  }
+  &__video{
+    height: 205px;
+    width: 100%;
+    max-width: 400px;
+    @media (max-width: $breakpoint-md) {
+      margin-top: 30px;
     }
   }
   &__title{
