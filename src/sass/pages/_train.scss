@@ -1,0 +1,53 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+.our-instructors{
+  &__title{}
+  &__desc{
+    margin-bottom: 80px;
+    @media (max-width: $breakpoint-sm){
+      margin-bottom: 45px;
+    }
+    .app-txt + .app-txt {
+      margin-top: 10px;
+    }
+  }
+  &__content{
+    padding: 15px 0;
+    background-color: #fff;
+    margin-bottom: 30px;
+    backface-visibility: hidden;
+    @include transition;
+    img{
+      backface-visibility: hidden;
+      @include transition;
+    }
+    &:hover{
+      box-shadow: 0 11px 25px -3px rgba(0, 0, 0, 0.15);
+      img{
+        opacity: 0.6;
+      }
+    }
+  }
+  &__name{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: normal;
+    color: var(--col-primary);
+    @include transition;
+    margin: 15px 0 5px 0;
+  }
+  &__role{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: normal;
+    color: var(--col-grey);
+  }
+  &__{}
+}
