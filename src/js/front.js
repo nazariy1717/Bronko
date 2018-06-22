@@ -134,6 +134,12 @@ let front = {
             $input.val(inputValue);
         });
 
+        $(document).on('click', '.sidebar-keywords__btn', function () {
+            $(this).closest('.sidebar-keywords').toggleClass('js-active');
+        });
+
+
+
 
     }
 };
@@ -179,8 +185,10 @@ let modal = {
         $(document).on('click', '.modal__close', function () {
             let self = '#' + $(this).closest('.modal').attr('id');
             modal.closeModal(self);
-
         });
+
+
+
 
     }
 };

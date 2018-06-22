@@ -18,6 +18,15 @@
 
 
 /*******/
+.icon-play-circle:before {
+  content: "\e91d";
+}
+.icon-circle-plus:before {
+  content: "\e91e";
+}
+.icon-lock:before {
+  content: "\e91c";
+}
 .icon-pagination-left:before {
   content: "\e91a";
 }
