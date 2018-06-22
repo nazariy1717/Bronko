@@ -95,6 +95,9 @@ strong{
   line-height: normal;
   color: var(--col-black);
   margin-bottom: 20px;
+  &.--modifier{
+    margin-bottom: 0;
+  }
 }
 
 
@@ -107,6 +110,9 @@ strong{
   color: var(--col-grey);
   &.--white{
     color: #fff;
+  }
+  &.--black{
+    color: var(--col-black);
   }
   &.--small{
     font-size: 14px;

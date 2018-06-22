@@ -245,39 +245,14 @@
   &__item{
     position: relative;
     margin-bottom: 15px;
-    a{
-      display: block;
-      padding-right: 30px;
-    }
+    display: block;
+    padding-right: 30px;
     &:last-child{
       margin-bottom: 0;
     }
     &:hover{
       .sidebar-categories__name, .sidebar-categories__count{
         color: var(--col-primary);
-      }
-    }
-    &:after{
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      color: var(--col-primary);
-      font-size: 20px;
-      cursor: pointer;
-      text-align: center;
-      border: 1px solid var(--col-primary);
-      border-radius: 50%;
-      font-family: 'icomoon' !important;
-    }
-    &.--play{
-      &:after{
-        content: "\e91d";
-      }
-    }
-    &.--add{
-      &:after{
-        content: "\e91e";
       }
     }
   }
@@ -291,6 +266,18 @@
   }
   &__count{
     font-weight: normal;
+  }
+  &__icon{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    color: var(--col-primary);
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid var(--col-primary);
+    border-radius: 50%;
   }
 }
 
