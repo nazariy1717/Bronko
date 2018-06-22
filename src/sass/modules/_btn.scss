@@ -109,6 +109,19 @@
       }
     }
   }
+  &.--plus{
+    &:after{
+      content: "\e91e";
+      font-size: 26px;
+      top: -4px;
+      left: -4px;
+    }
+    &:hover{
+      &:after{
+        transform: rotate(90deg);
+      }
+    }
+  }
 }
 
 .btn-right{

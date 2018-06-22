@@ -47,12 +47,21 @@ let front = {
         }
     },
 
-    toogleHeaderDrop: function(){
+    toggleHeaderDrop: function(){
         if (!this.header_drop.hasClass('is-active')) {
             this.header_drop.addClass("is-active");
         }
         else {
             this.header_drop.removeClass("is-active");
+        }
+    },
+
+    togglePlaylistDrop: function(){
+        if (!$('.playlist-drop').hasClass('is-active')) {
+            $('.playlist-drop').addClass("is-active");
+        }
+        else {
+            $('.playlist-drop').removeClass("is-active");
         }
     },
 
@@ -88,18 +97,21 @@ let front = {
         });
 
         $(document).on('click', '.header-drop__btn', function () {
-            self.toogleHeaderDrop();
+            self.toggleHeaderDrop();
+        });
+        $(document).on('click', '.playlist-drop__btn', function () {
+            self.togglePlaylistDrop();
         });
 
         $(document).on('click', '.js-panel-head', function () {
 
-            if($(this).parent().hasClass('js-active')){
-                $(this).parent().find('.js-panel-content').slideUp(function(){
-                    $(this).parent().removeClass('js-active');
+            if($(this).closest('.js-panel').hasClass('js-active')){
+                $(this).closest('.js-panel').find('.js-panel-content').slideUp(function(){
+                    $(this).closest('.js-panel').removeClass('js-active');
                 });
             } else {
-                $(this).parent().find('.js-panel-content').slideDown(function(){
-                    $(this).parent().addClass('js-active');
+                $(this).closest('.js-panel').find('.js-panel-content').slideDown(function(){
+                    $(this).closest('.js-panel').addClass('js-active');
                 });
             }
 
@@ -115,7 +127,16 @@ let front = {
                         openDropdown.classList.remove('is-active');
                     }
                 }
+            } else if (!event.target.matches('.playlist-drop__btn')) {
+                let dropdowns = document.getElementsByClassName("playlist-drop");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    let openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('is-active')) {
+                        openDropdown.classList.remove('is-active');
+                    }
+                }
             }
+
         };
 
 
