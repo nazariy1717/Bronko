@@ -656,11 +656,84 @@
                 </div>
 
                 <div class="col-lg-9 col-xs-12 column">
-                    <span class="app-title-sm">Manage Playlists</span>
-                    <p class="app-txt --black">Drag and Drop to sort order. First five playlists will appear in the Sidebar Playlist Menu</p>
-                </div>
+                    <span class="app-title-sm --modifier">Manage Playlists</span>
+                    <p class="app-txt --black mb-40">Drag and Drop to sort order. First five playlists will appear in the Sidebar Playlist Menu</p>
 
-                
+                    <div class="manage-list" id="sortable">
+                        <div class="manage-list__item ui-state-default">
+                            <div class="manage-list__row row align-middle">
+                                <div class="column">
+                                    <img src="img/play-list-item.png" class="image">
+                                </div>
+                                <div class="column">
+                                    <span class="manage-list__title">Free Trial Playlist</span>
+                                    <span class="manage-list__author">Posted by: Bronko Hockey</span>
+                                    <span class="manage-list__count">3 videos</span>
+                                    <span class="manage-list__status">Not Editable</span>
+                                </div>
+                            </div>
+                            <a href="/" class="manage-list__icon icon-play-circle"></a>
+                        </div>
+                        <div class="manage-list__item ui-state-default">
+                            <div class="manage-list__row row align-middle">
+                                <div class="column">
+                                    <img src="img/play-list-item.png" class="image">
+                                </div>
+                                <div class="column">
+                                    <span class="manage-list__title">Free Trial Playlist</span>
+                                    <span class="manage-list__author">Posted by: Bronko Hockey</span>
+                                    <span class="manage-list__count">3 videos</span>
+                                    <span class="manage-list__status">Not Editable</span>
+                                </div>
+                            </div>
+                            <a href="/" class="manage-list__icon icon-play-circle"></a>
+                        </div>
+                        <div class="manage-list__item ui-state-default">
+                            <div class="manage-list__row row align-middle">
+                                <div class="column">
+                                    <img src="img/play-list-item.png" class="image">
+                                </div>
+                                <div class="column">
+                                    <span class="manage-list__title">Free Trial Playlist</span>
+                                    <span class="manage-list__author">Posted by: Bronko Hockey</span>
+                                    <span class="manage-list__count">3 videos</span>
+                                    <span class="manage-list__status">Not Editable</span>
+                                </div>
+                            </div>
+                            <a href="/" class="manage-list__icon icon-play-circle"></a>
+                        </div>
+                        <div class="manage-list__item ui-state-default">
+                            <div class="manage-list__row row align-middle">
+                                <div class="column">
+                                    <img src="img/play-list-item.png" class="image">
+                                </div>
+                                <div class="column">
+                                    <span class="manage-list__title">Free Trial Playlist</span>
+                                    <span class="manage-list__author">Posted by: Bronko Hockey</span>
+                                    <span class="manage-list__count">3 videos</span>
+                                    <span class="manage-list__status">Not Editable</span>
+                                </div>
+                            </div>
+                            <a href="/" class="manage-list__icon icon-play-circle"></a>
+                        </div>
+                        <div class="manage-list__item ui-state-default">
+                            <div class="manage-list__row row align-middle">
+                                <div class="column">
+                                    <img src="img/play-list-item.png" class="image">
+                                </div>
+                                <div class="column">
+                                    <span class="manage-list__title">Free Trial Playlist</span>
+                                    <span class="manage-list__author">Posted by: Bronko Hockey</span>
+                                    <span class="manage-list__count">3 videos</span>
+                                    <span class="manage-list__status">Not Editable</span>
+                                </div>
+                            </div>
+                            <a href="/" class="manage-list__icon icon-play-circle"></a>
+                        </div>
+                    </div>
+
+                    <a href="/" class="btn-link --left">Back to My Bronko Content</a>
+                </div>
             </div>
         </div>
     </section>
@@ -762,7 +835,15 @@
 
 
 <script src="js/libs/jquery-3.2.1.min.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
 <script src="js/front.js"></script>
-
+<script>
+    $( function() {
+        if($('.manage-list__item').length > 1){
+            $("#sortable").sortable();
+            $("#sortable").disableSelection();
+        }
+    } );
+</script>
 </body>
 </html>
