@@ -34,6 +34,41 @@
     line-height: 1.25;
     color: var(--col-grey);
   }
+
+  &__toggle{
+    display: none;
+
+    @media (max-width: $breakpoint-lg){
+      display: block;
+    }
+  }
+  &__toggle-btn{
+    position: relative;
+    padding-right: 30px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: normal;
+    color: var(--col-primary);
+    margin-bottom: 30px;
+    &:after{
+      content: "\e915";
+      font-family: 'icomoon' !important;
+      position: absolute;
+      top: 2px;
+      right: 10px;
+      font-size: 14px;
+      transform: scale(-1) rotate(-90deg);
+      color: var(--col-primary);
+      transition: all 0.25s ease;
+    }
+    &.js-active{
+      &:after{
+        transform: scale(-1) rotate(90deg);
+      }
+    }
+  }
+
 }
 
 .registration{
@@ -175,6 +210,9 @@
   position: relative;
   padding: 20px 15px;
   border: solid 1px #d4d4d4;
+  @media (max-width: $breakpoint-lg){
+    display: none;
+  }
   &__item{
     padding-bottom: 20px;
     margin-bottom: 20px;

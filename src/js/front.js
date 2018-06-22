@@ -138,6 +138,10 @@ let front = {
             $(this).closest('.sidebar-keywords').toggleClass('js-active');
         });
 
+        $(document).on('click', '.dashboard__toggle-btn', function () {
+            $(this).toggleClass('js-active');
+            $(this).parent().parent().find('.dashboard-sidebar').slideToggle();
+        });
 
 
 

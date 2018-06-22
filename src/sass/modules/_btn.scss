@@ -90,14 +90,11 @@
     color: var(--col-primary);
     transition: all 0.25s ease;
   }
-
-
   &:hover{
     &:after{
       transform: translateX(5px);
     }
   }
-
   &.--left{
     padding-left: 20px;
     padding-right: 0;
