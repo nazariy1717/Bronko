@@ -413,17 +413,6 @@
   }
   &__head{
     position: relative;
-  }
-  &__body{
-    padding-top: 35px;
-  }
-  &__title{
-    display: block;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: normal;
-    color: var(--col-black);
     .icon-play-circle{
       position: relative;
       top: 2px;
@@ -438,6 +427,21 @@
       top: 3px;
       margin-left: 5px;
       font-size: 24px;
+      color: var(--col-primary);
+    }
+  }
+  &__body{
+    padding-top: 35px;
+  }
+  &__title{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    color: var(--col-black);
+    @include transition;
+    &:hover{
       color: var(--col-primary);
     }
   }
