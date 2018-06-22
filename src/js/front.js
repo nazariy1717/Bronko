@@ -92,8 +92,17 @@ let front = {
         });
 
         $(document).on('click', '.js-panel-head', function () {
-            $(this).parent().toggleClass('js-active');
-            $(this).parent().find('.js-panel-content').slideToggle();
+
+            if($(this).parent().hasClass('js-active')){
+                $(this).parent().find('.js-panel-content').slideUp(function(){
+                    $(this).parent().removeClass('js-active');
+                });
+            } else {
+                $(this).parent().find('.js-panel-content').slideDown(function(){
+                    $(this).parent().addClass('js-active');
+                });
+            }
+
         });
 
 
