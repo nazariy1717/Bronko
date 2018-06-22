@@ -30,7 +30,6 @@
   }
 }
 
-
 .app-head-sm{
   margin-top: 135px;
   height: 100px;
@@ -38,7 +37,6 @@
   -webkit-background-size: cover;
   background-size: cover;
 }
-
 
 .breadcrumbs{
   position: relative;
@@ -133,8 +131,6 @@
   }
 }
 
-
-
 .page-column{
   &__column{
     max-width: 380px;
@@ -174,7 +170,6 @@
     }
   }
 }
-
 
 .app-testimonials{
   position: relative;
@@ -241,8 +236,6 @@
   }
 }
 
-
-
 .page-tabs{
   &__list{
     border-bottom: 1px solid #d8d8d8;
@@ -308,7 +301,6 @@
   }
 }
 
-
 .v-section{
   &__video{
     width: 100%;
@@ -319,8 +311,6 @@
   }
 }
 
-
-
 .tab-content {
   display: none;
   animation: fadeEffect .5s;
@@ -329,7 +319,6 @@
     display: block;
   }
 }
-
 
 .faq{
   &__block{
@@ -396,8 +385,6 @@
   }
 }
 
-
-
 .page-accordion{
   &__block{
     margin-bottom: 30px;
@@ -406,6 +393,9 @@
         &:after{
           top: 100%;
         }
+      }
+      .page-accordion__content{
+        display: block;
       }
     }
   }
