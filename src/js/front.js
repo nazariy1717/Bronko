@@ -96,6 +96,15 @@ let front = {
             self.toogleNav();
         });
 
+        $('.js-scrollLink').on('click', function (e) {
+            e.preventDefault();
+            let target = this.hash;
+            let $target = $(target);
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top -80
+            }, 500, 'swing');
+        });
+
         $(document).on('click', '.header-drop__btn', function () {
             self.toggleHeaderDrop();
         });

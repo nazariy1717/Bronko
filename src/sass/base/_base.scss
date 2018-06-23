@@ -148,6 +148,14 @@ strong{
       margin-bottom: 0;
     }
   }
+  &__item{
+    display: list-item;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+  }
 }
 
 
