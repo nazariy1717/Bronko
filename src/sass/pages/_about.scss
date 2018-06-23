@@ -1,6 +1,41 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
+
+.about-who{
+  background: url(../img/background/about-who-bg.png) center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  &__carousel{
+    margin: auto;
+    width: 470px;
+    @media (max-width: $breakpoint-xl){
+      padding: 0 30px;
+      width: 500px;
+    }
+    @media (max-width: $breakpoint-md){
+      width: auto;
+      max-width: 500px;
+    }
+    .flickity-prev-next-button{
+      color: #fff;
+    }
+    .flickity-prev-next-button.previous{
+      left: -30px;
+      @media (max-width: $breakpoint-xl){
+        left: -10px;
+      }
+    }
+    .flickity-prev-next-button.next{
+      right: -20px;
+      @media (max-width: $breakpoint-xl){
+        right: 0;
+      }
+    }
+  }
+  &__cell{}
+}
+
 .contacts{
   &__block{
     padding-left: 35px;
@@ -44,8 +79,6 @@
     }
   }
 }
-
-
 
 .article{
   &__top{
