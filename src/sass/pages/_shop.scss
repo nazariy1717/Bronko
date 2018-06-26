@@ -485,6 +485,15 @@
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
+
+      &:nth-child(odd){
+        .column:nth-of-type(1){
+          @include order(2);
+        }
+        .column:nth-of-type(2){
+          @include order(1);
+        }
+      }
     }
   }
   &__img{
@@ -512,7 +521,7 @@
     }
     @media (max-width: $breakpoint-md) {
       height: initial;
-      margin: 30px 0;
+      margin: 30px 0 0;
     }
   }
   &__title{
