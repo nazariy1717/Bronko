@@ -116,6 +116,9 @@
       -ms-flex-align: center;
       align-items: center;
     }
+    @media (max-width: $breakpoint-lg){
+      margin-bottom: 30px;
+    }
     &.--row-reverse{
       -webkit-flex-flow: row-reverse  wrap;
       flex-flow: row-reverse wrap;
