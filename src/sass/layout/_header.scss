@@ -385,6 +385,7 @@
     position: absolute;
     right: 0;
     top: 11px;
+    z-index: -1;
     font-size: 8px;
     color: #fff;
     @include transition;
