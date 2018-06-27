@@ -164,6 +164,7 @@
   &__content{
     position: relative;
     @include transition;
+
     &:hover{
       .page-column__overlay{
         background-color: var(--col-primary);
@@ -176,12 +177,12 @@
   &__overlay{
     background-color: #fff;
     @include transition;
-    //&.--white{
-    //  background-color: #fff;
-    //  .page-column__overlay-title{
-    //    color: var(--col-black);
-    //  }
-    //}
+    &.--black{
+      background-color: var(--col-black);
+      span{
+        color: #fff;
+      }
+    }
   }
   &__overlay-title{
     display: block;

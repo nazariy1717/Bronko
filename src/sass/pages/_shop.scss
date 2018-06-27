@@ -546,3 +546,90 @@
   }
   &__{}
 }
+
+
+.teams-shop{
+  &__row{
+    @media (max-width: $breakpoint-xl){
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+    @media (max-width: $breakpoint-lg){
+      margin-bottom: 30px;
+    }
+    &.--row-reverse{
+      -webkit-flex-flow: row-reverse  wrap;
+      flex-flow: row-reverse wrap;
+      .teams-shop__content{
+        padding-left: 15px;
+      }
+      .teams-shop__image-content{
+        left: initial;
+        right: 0;
+        @media (max-width: $breakpoint-xl){
+          right: initial;
+        }
+      }
+      .teams-shop__image-caption-txt{
+        margin-left: auto;
+        margin-right: 0;
+        @media (max-width: $breakpoint-lg){
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+  &__content{
+    height: 440px;
+    padding-right: 15px;
+    @media (max-width: $breakpoint-xl){
+      height: initial;
+      padding: 30px 0;
+    }
+  }
+  &__image-content{
+    position: absolute;
+    left: 0;
+    width: 720px;
+    height: 440px;
+    @media (max-width: $breakpoint-xl){
+      position: initial;
+      left: initial;
+      width: initial;
+      height: initial;
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+  &__image-caption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #E7E7E6;
+    padding: 25px 15px;
+    @media (max-width: $breakpoint-xl){
+      position: relative;
+      bottom: 5px;
+      left: initial;
+      right: initial;
+    }
+    @media (max-width: $breakpoint-lg){
+      max-width: 720px;
+    }
+  }
+  &__image-caption-txt{
+    max-width: 570px;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.25;
+    color: var(--col-primary);
+    @media (max-width: $breakpoint-sm){
+      font-size: 16px;
+    }
+  }
+}
