@@ -64,6 +64,10 @@
 .instructor{
   &__column{
     margin-bottom: 30px;
+    @media (max-width: $breakpoint-xl){
+      order: 2;
+      margin: 30px 0;
+    }
     .app-txt + .app-txt {
       margin-top: 10px;
     }
