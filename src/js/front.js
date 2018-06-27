@@ -1,10 +1,8 @@
 let front = {
 
-
     hamburger: $('.hamburger'),
     nav: $('.header-mobile'),
     header_drop: $('.header-drop'),
-
 
     slider_options_default: {
         wrapAround: true,
@@ -95,6 +93,15 @@ let front = {
         $(document).on('click', '.hamburger', function () {
             self.toogleNav();
         });
+
+        $(document).on('click', '.header-nav__link', function () {
+            console.log($(window).width());
+            if ($(window).width() + 16 < 991) {
+                $(this).toggleClass('js-link-active');
+            }
+        });
+
+
 
         $('.js-scrollLink').on('click', function (e) {
             e.preventDefault();
