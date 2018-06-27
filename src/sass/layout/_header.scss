@@ -98,6 +98,7 @@
 
 
 .header-nav{
+  font-size: 0;
   text-align: center;
   &__item{
     display: inline-block;
@@ -159,12 +160,14 @@
   left: 0;
   right: 0;
   top: 135px;
+  height: 385px;
   background-color: #fff;
   @media (max-width: $breakpoint-lg) {
     position: relative;
     left: 0;
     right: 0;
     top: 0;
+    height: initial;
     background-color: transparent;
   }
   &__container{
@@ -180,6 +183,10 @@
   }
 
   &__bottom{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
     height: 50px;
     line-height: 50px;
     font-size: 20px;
