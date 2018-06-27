@@ -92,7 +92,20 @@
   }
   &:hover{
     .camp-column__block{
-      box-shadow: 0 11px 25px -3px rgba(0,0,0,0.15);
+      .camp-column__title{
+        color: #fff;
+        z-index: 1;
+        &:after{
+          content: '';
+          position: absolute;
+          top: -11px;
+          left: -15px;
+          right: -15px;
+          bottom: -10px;
+          z-index: -1;
+          background-color: var(--col-primary);
+        }
+      }
     }
   }
   &.active{
@@ -152,17 +165,23 @@
     position: relative;
     @include transition;
     &:hover{
-      box-shadow: 0 11px 25px -3px rgba(0,0,0,0.15);
+      .page-column__overlay{
+        background-color: var(--col-primary);
+      }
+      .page-column__overlay-title{
+        color: #fff;
+      }
     }
   }
   &__overlay{
-    background-color: #111626;
-    &.--white{
-      background-color: #fff;
-      .page-column__overlay-title{
-        color: var(--col-black);
-      }
-    }
+    background-color: #fff;
+    @include transition;
+    //&.--white{
+    //  background-color: #fff;
+    //  .page-column__overlay-title{
+    //    color: var(--col-black);
+    //  }
+    //}
   }
   &__overlay-title{
     display: block;
@@ -170,7 +189,8 @@
     font-size: 22px;
     font-weight: 600;
     line-height: 45px;
-    color: #fff;
+    //color: #fff;
+    color: var(--col-black);
     &.--small{
       font-size: 20px;
     }

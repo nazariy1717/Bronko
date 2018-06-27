@@ -427,15 +427,21 @@
     @media (max-width: $breakpoint-sm){
       margin: auto auto 30px;
     }
+    &:hover{
+      .news-column__content{
+        background-color: var(--col-primary);
+        span{
+          color: #fff;
+        }
+      }
+    }
   }
   &__content{
     position: relative;
     padding: 10px 15px 20px 15px;
     background-color: #fff;
     @include transition;
-    &:hover{
-      box-shadow: 0 11px 25px -3px rgba(0,0,0,0.15);
-    }
+
   }
   &__date{
     display: block;
