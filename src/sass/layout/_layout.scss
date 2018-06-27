@@ -8,6 +8,9 @@
   background: center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  @media (max-width: $breakpoint-sm){
+    margin-top: 100px;
+  }
   &__overlay{
     position: absolute;
     left: 0;
@@ -39,6 +42,9 @@
   background: url(../img/background/small-head-bg.png) center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  @media (max-width: $breakpoint-sm){
+    margin-top: 100px;
+  }
 }
 
 .breadcrumbs{

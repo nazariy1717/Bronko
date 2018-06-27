@@ -96,11 +96,17 @@
 .icon-search:before {
   content: "\e904";
 }
-.icon-shop_cart:before {
-  content: "\e905";
+.icon-shop_cart {
+  width: 32px;
+  height: 25px;
+  background: url(../img/svg/shop_cart.svg) center no-repeat;
+  background-size: contain;
 }
-.icon-user:before {
-  content: "\e906";
+.icon-user {
+  width: 55px;
+  height: 30px;
+  background: url(../img/svg/user.svg) left no-repeat;
+  background-size: contain;
 }
 .icon-youtube:before {
   content: "\e907";

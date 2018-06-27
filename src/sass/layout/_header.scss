@@ -87,11 +87,14 @@
   }
   &__row{
     height: 100px;
+    @media (max-width: $breakpoint-sm){
+      height: 65px;
+    }
   }
 
   &__logo{
-    @media (max-width: 374px){
-      max-width: 200px;
+    @media (max-width: $breakpoint-sm){
+      max-width: 155px;
     }
   }
 }
@@ -120,7 +123,7 @@
   }
   &__link{
     position: relative;
-    padding: 40px 15px;
+    padding: 40px 17px;
     display: block;
     font-size: 16px;
     font-weight: bold;
@@ -296,6 +299,9 @@
     padding-bottom: 45px;
     transform: translateX(300px);
     @include transition;
+    @media (max-width: $breakpoint-sm) {
+      top: 32px;
+    }
     &.js-show{
       transform: translateX(0);
     }
@@ -308,8 +314,12 @@
 
 .header-menu {
   text-align: right;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
   @media (max-width: $breakpoint-lg) {
     text-align: center;
+    justify-content: center;
   }
   &__item {
     display: inline-block;
@@ -318,32 +328,31 @@
     }
     @media (max-width: $breakpoint-lg) {
       &:nth-last-child(1){
-        display: block;
+        margin-left: 0;
       }
     }
   }
   &__link {
+    display: block;
     position: relative;
-    font-size: 25px;
+    font-size: 26px;
     color: #fff;
     @include transition;
     &.--cart{
       i{
         position: absolute;
-        top: 0;
-        left: 20px;
-        padding: 0 5px;
+        top: -2px;
+        left: 21px;
+        padding: 0 4px;
         vertical-align: middle;
-        height: 16px;
+        height: 15px;
         text-align: center;
-        font-size: 14px;
+        font-size: 13px;
         border-radius: 10px;
-        line-height: 14px;
+        line-height: 15px;
+        font-family: 'Myriad Pro', sans-serif;
         background-color: var(--col-primary);
       }
-    }
-    &:hover{
-      color: #afafaf;
     }
   }
 }
@@ -370,22 +379,8 @@
     @media (max-width: $breakpoint-lg) {
       display: none;
     }
-    &:after{
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -1px;
-      width: 30px;
-      height: 30px;
-      border: 2px solid #afafaf;
-      border-radius: 50%;
-      @include transition;
-    }
     &:hover{
       color: #fff;
-      &:after{
-        border: 2px solid #fff;
-      }
     }
   }
   &__icon{
@@ -487,6 +482,10 @@
     color: inherit;
     border: 0;
     background-color: transparent;
+    @media (max-width: $breakpoint-sm) {
+      top: 0;
+      padding: 15px;
+    }
     &, .hamburger__box {
       cursor: pointer;
       display: inline-block;
