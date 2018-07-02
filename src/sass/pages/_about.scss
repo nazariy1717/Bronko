@@ -232,6 +232,21 @@
       margin-bottom: 30px;
     }
   }
+
+  &__link{
+    span{
+      margin-bottom: 10px;
+    }
+    a{
+      font-weight: bold;
+    }
+  }
+  &__author{
+    span:nth-child(1){
+      font-style: italic;
+    }
+  }
+
   &__bottom{
     .column{
       @media (max-width: $breakpoint-md){
