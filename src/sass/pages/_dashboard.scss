@@ -123,21 +123,11 @@
 
 .dashboard-user{
   margin-bottom: 30px;
-  @media (max-width: $breakpoint-sm){
-    max-width: 270px;
-  }
+  max-width: 270px;
   &__content{
     padding: 15px;
     background-color: #fff;
     border: solid 1px #d4d4d4;
-    @media (max-width: $breakpoint-lg){
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-flow: row wrap;
-      flex-flow: row wrap;
-    }
   }
   &__image{
     height: 240px;
@@ -145,9 +135,6 @@
     -webkit-background-size: cover;
     background-size: cover;
     margin-bottom: 10px;
-    @media (max-width: $breakpoint-lg){
-     @include grid-size(33.333%);
-    }
     @media (max-width: $breakpoint-sm){
       @include grid-size(100%);
     }
@@ -161,17 +148,11 @@
     line-height: normal;
     color: var(--col-black);
     margin-bottom: 10px;
-    @media (max-width: $breakpoint-lg){
-      @include grid-size(33.333%);
-    }
     @media (max-width: $breakpoint-sm){
       @include grid-size(100%);
     }
   }
   &__list{
-    @media (max-width: $breakpoint-lg){
-      @include grid-size(33.333%);
-    }
     @media (max-width: $breakpoint-sm){
       @include grid-size(100%);
     }
