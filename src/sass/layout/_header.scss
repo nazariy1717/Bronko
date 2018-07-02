@@ -295,22 +295,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**/
-
-
 .header-mobile{
   @media (max-width: $breakpoint-lg) {
     position: absolute;
@@ -364,6 +348,17 @@
     font-size: 26px;
     color: #fff;
     @include transition;
+    &.--text{
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: normal;
+      div{
+        vertical-align: middle;
+        width: 40px;
+        display: inline-block;
+      }
+    }
     &.--cart{
       i{
         position: absolute;
