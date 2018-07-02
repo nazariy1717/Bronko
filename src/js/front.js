@@ -38,6 +38,7 @@ let front = {
         if (!this.hamburger.hasClass('is-active')) {
             this.hamburger.addClass("is-active");
             this.nav.toggleClass('js-show');
+            $('.header').addClass('js-open');
         }
         else {
             this.hamburger.removeClass("is-active");

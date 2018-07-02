@@ -3,17 +3,23 @@
 
 
 .home-screen{
-  padding-top: 135px;
-  height: 100vh;
+  margin-top: 135px;
+  height: calc(100vh - 135px);
   background-color: #414141;
-  &__carousel{
+  @media (max-width: $breakpoint-lg){
+    margin-top: 100px;
+    height: calc(100vh - 100px);
   }
+  &__carousel{  }
   &__cell{
     width: 100%;
     height: calc(100vh - 135px);
     background: center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
+    @media (max-width: $breakpoint-lg){
+      height: calc(100vh - 100px);
+    }
   }
   &__content{
     cursor: initial;

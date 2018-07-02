@@ -76,9 +76,31 @@
   right: 0;
   z-index: 99;
   background-color: var(--col-black);
-  &.js-fixed{
-    //position: fixed;
-    //top: 0;
+  &.js-open{
+    @media (max-width: $breakpoint-lg){
+      .header__row{
+        height: 100px;
+      }
+      .header__logo{
+        max-width: 100%;
+      }
+      .hamburger{
+        top: 8px;
+        padding: 23px 15px;
+      }
+    }
+    @media (max-width: $breakpoint-sm){
+      .header__row{
+        height: 65px;
+      }
+      .header__logo{
+        max-width: 155px;
+      }
+      .hamburger{
+        top: 0;
+        padding: 15px;
+      }
+    }
   }
   &__container{
     margin: auto;
@@ -87,13 +109,15 @@
   }
   &__row{
     height: 100px;
-    @media (max-width: $breakpoint-sm){
+    @include transition;
+    @media (max-width: $breakpoint-lg){
       height: 65px;
     }
   }
 
   &__logo{
-    @media (max-width: $breakpoint-sm){
+    @include transition;
+    @media (max-width: $breakpoint-lg){
       max-width: 155px;
     }
   }
@@ -336,11 +360,6 @@
     & + & {
       margin-left: 40px;
     }
-    @media (max-width: $breakpoint-lg) {
-      &:nth-last-child(1){
-        margin-left: 0;
-      }
-    }
   }
   &__link {
     display: block;
@@ -355,7 +374,7 @@
       line-height: normal;
       div{
         vertical-align: middle;
-        width: 40px;
+        width: 35px;
         display: inline-block;
       }
     }
@@ -381,6 +400,7 @@
 
 .header-drop{
   position: relative;
+  right: 20px;
   &.is-active{
     .header-drop__icon{
       transform: scale(-1);
@@ -503,7 +523,7 @@
     color: inherit;
     border: 0;
     background-color: transparent;
-    @media (max-width: $breakpoint-sm) {
+    @media (max-width: $breakpoint-lg) {
       top: 0;
       padding: 15px;
     }
