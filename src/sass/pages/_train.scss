@@ -4,6 +4,19 @@
 
 .our-instructors{
   &__title{}
+  &__column{
+    &.active{
+      a{
+        pointer-events: none;
+      }
+      img{
+        opacity: 0.6;
+      }
+      .our-instructors__name{
+        color: var(--col-grey);
+      }
+    }
+  }
   &__desc{
     margin-bottom: 80px;
     @media (max-width: $breakpoint-sm){
@@ -18,14 +31,7 @@
     margin-bottom: 30px;
     backface-visibility: hidden;
     @include transition;
-    &.active{
-      img{
-        opacity: 0.6;
-      }
-      .our-instructors__name{
-        color: var(--col-grey);
-      }
-    }
+
     img{
       backface-visibility: hidden;
       @include transition;
