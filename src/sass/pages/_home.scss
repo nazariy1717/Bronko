@@ -183,9 +183,18 @@
     @media (max-width: $breakpoint-lg){
       margin: 30px auto auto;
     }
+    @media (max-width: $breakpoint-sm){
+      margin: auto auto 30px;
+    }
   }
 
   @media (max-width: $breakpoint-sm){
+    .column:nth-child(1){
+      @include order(2);
+    }
+    .column:nth-child(2){
+      @include order(1);
+    }
     .btn{
       width: 150px;
     }
