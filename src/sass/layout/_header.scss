@@ -307,10 +307,12 @@
     }
   }
   &__caption{
+    position: relative;
+    top: -1px;
     display: block;
     padding: 10px;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: bold;
     line-height: normal;
     text-align: left;
     color: var(--col-black);

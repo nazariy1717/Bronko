@@ -148,7 +148,7 @@
     display: block;
     font-family: 'Myriad Pro', sans-serif;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: bold;
     line-height: normal;
     color: var(--col-black);
     margin-bottom: 15px;
@@ -181,6 +181,8 @@
     }
   }
   &__overlay{
+    position: relative;
+    top: -1px;
     background-color: #fff;
     @include transition;
     &.--black{
@@ -194,7 +196,7 @@
     display: block;
     padding-left: 15px;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: bold;
     line-height: 45px;
     //color: #fff;
     color: var(--col-black);
