@@ -10,6 +10,9 @@
     margin-top: 100px;
     height: calc(100vh - 100px);
   }
+  @media (max-width: 655px){
+    margin-top: 110px;
+  }
   &__carousel{  }
   &__cell{
     width: 100%;

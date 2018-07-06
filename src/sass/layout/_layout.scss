@@ -11,6 +11,9 @@
   @media (max-width: $breakpoint-lg){
     margin-top: 100px;
   }
+  @media (max-width: 655px){
+    margin-top: 110px;
+  }
   &__overlay{
     position: absolute;
     left: 0;
@@ -44,6 +47,9 @@
   background-size: cover;
   @media (max-width: $breakpoint-lg){
     margin-top: 100px;
+  }
+  @media (max-width: 655px){
+    margin-top: 110px;
   }
 }
 
