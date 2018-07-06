@@ -114,12 +114,13 @@
     &:after{
       content: "\e91e";
       font-size: 26px;
-      top: -3px;
+      top: 50%;
+      transform: rotate(0) translateY(-50%);
       left: -4px;
     }
     &:hover{
       &:after{
-        transform: rotate(90deg);
+        transform: translateY(-50%) rotate(90deg);
       }
     }
   }

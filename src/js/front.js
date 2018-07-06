@@ -96,12 +96,15 @@ let front = {
         });
 
         $(document).on('click', '.header-nav__link', function () {
-            console.log($(window).width());
             if ($(window).width() + 16 < 991) {
                 $(this).toggleClass('js-link-active');
             }
         });
-
+        $(document).on('click', '.header-drop__link.--drop', function () {
+            if ($(window).width() + 16 < 991) {
+                $(this).toggleClass('js-link-active');
+            }
+        });
 
 
         $('.js-scrollLink').on('click', function (e) {

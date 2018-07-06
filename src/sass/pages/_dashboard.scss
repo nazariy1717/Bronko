@@ -92,6 +92,9 @@
     height: 200px;
     margin-top: 100px;
   }
+  @media (max-width: 655px){
+    margin-top: 110px;
+  }
   &__overlay{
     position: absolute;
     left: 0;
@@ -124,6 +127,9 @@
 .dashboard-user{
   margin-bottom: 30px;
   max-width: 270px;
+  @media (max-width: $breakpoint-lg){
+    display: none;
+  }
   &__content{
     padding: 15px;
     background-color: #fff;
