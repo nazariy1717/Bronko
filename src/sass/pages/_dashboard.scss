@@ -403,6 +403,7 @@
   }
   &__head{
     position: relative;
+    padding-right: 30px;
     .icon-play-circle{
       position: relative;
       top: 2px;
@@ -431,6 +432,14 @@
     line-height: normal;
     color: var(--col-black);
     @include transition;
+    &-shop{
+      display: inline-block;
+      width: 30px;
+      height: 25px;
+      vertical-align: sub;
+      background: url(../img/svg/shop_cart_red.svg) center no-repeat;
+      background-size: contain;
+    }
     &:hover{
       color: var(--col-primary);
     }
