@@ -191,6 +191,12 @@ let front = {
         $(document).on('click', '.dashboard__toggle-btn', function () {
             $(this).toggleClass('js-active');
             $(this).parent().parent().find('.dashboard-sidebar').slideToggle();
+
+            if($(this).hasClass('js-active')){
+                $(this).text('Hide User Sidebar');
+            } else{
+                $(this).text('Show user sidebar');
+            }
         });
 
 
