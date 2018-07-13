@@ -3,7 +3,7 @@
 
 
 .top-bar{
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -71,7 +71,7 @@
 
 
 .header{
-  position: fixed;
+  position: absolute;
   top: 35px;
   left: 0;
   right: 0;
@@ -80,6 +80,19 @@
   @media (max-width: 655px){
     top: 45px;
   }
+  &.js-fixed{
+    position: fixed;
+    top: 0;
+  }
+  @media (max-width: $breakpoint-lg){
+    &.nav-up{
+      display: none;
+    }
+    &.nav-down{
+      display: block;
+    }
+  }
+
   &.js-open{
     @media (max-width: $breakpoint-lg){
       .header__row{

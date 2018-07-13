@@ -4,6 +4,14 @@ let front = {
     nav: $('.header-mobile'),
     header_drop: $('.header-drop'),
 
+    didScroll: false,
+    lastScrollTop: 0,
+    delta: 5,
+    navbarHeight: $('header').outerHeight(),
+
+
+
+
     slider_options_default: {
         wrapAround: true,
         pageDots: false,
@@ -16,7 +24,12 @@ let front = {
 
     init: function () {
         this.events();
-        this.headerScroll();
+        setInterval(function() {
+            if (this.didScroll) {
+                this.headerScroll();
+                this.didScroll = false;
+            }
+        }, 250);
     },
 
     newSlider: function (selector, options) {
@@ -32,7 +45,32 @@ let front = {
         } else {
             $('.header').removeClass('js-fixed');
         }
+
+        if( $(window).scrollTop() > 300){
+            let st = $(window).scrollTop();
+
+            // Make sure they scroll more than delta
+            if(Math.abs(this.lastScrollTop - st) <= this.delta)
+                return;
+
+            // If they scrolled down and are past the navbar, add class .nav-up.
+            // This is necessary so you never see what is "behind" the navbar.
+            if (st > this.lastScrollTop && st > this.navbarHeight){
+                // Scroll Down
+                $('header').removeClass('nav-down').addClass('nav-up');
+            } else {
+                // Scroll Up
+                if(st + $(window).height() < $(document).height()) {
+                    $('header').removeClass('nav-up').addClass('nav-down');
+                }
+            }
+
+            this.lastScrollTop = st;
+        }
+
     },
+
+
 
     toogleNav: function(){
         if (!this.hamburger.hasClass('is-active')) {
@@ -89,6 +127,7 @@ let front = {
 
         $(window).on('scroll',function(){
             self.headerScroll();
+            self.didScroll = true;
         });
 
         $(document).on('click', '.hamburger', function () {
