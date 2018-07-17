@@ -193,13 +193,17 @@
   }
 }
 
+
+.dashboard-js-toggle{
+  @media (max-width: $breakpoint-lg){
+    display: none;
+  }
+}
+
 .dashboard-sidebar{
   position: relative;
   padding: 20px 15px;
   border: solid 1px #d4d4d4;
-  @media (max-width: $breakpoint-lg){
-    display: none;
-  }
   &__item{
     padding-bottom: 20px;
     margin-bottom: 20px;
