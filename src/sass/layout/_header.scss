@@ -31,6 +31,9 @@
 
   &__right{
     @include grid-size(290px);
+    @media (max-width: $breakpoint-sm){
+      display: none;
+    }
   }
 
   &__info{
